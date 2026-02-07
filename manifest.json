@@ -1,0 +1,66 @@
+{
+  "name": "연말정산 미리보기",
+  "short_name": "연말정산",
+  "description": "예상 환급액 즉시 확인하는 연말정산 시뮬레이션 앱",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f0f1e",
+  "theme_color": "#3742fa",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["finance", "productivity"],
+  "screenshots": [
+    {
+      "src": "icons/screenshot-1.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "icons/screenshot-2.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "계산하기",
+      "short_name": "계산",
+      "description": "연말정산 환급액 계산",
+      "url": "index.html?mode=calculate",
+      "icons": [
+        {
+          "src": "icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
