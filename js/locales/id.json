@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "Pratinjau Pengembalian Pajak - Kalkulator | DopaBrain",
+    "description": "Simulasi perkiraan pengembalian pajak 2026. Hitung pengembalian perkiraan secara instan dengan memasukkan gaji dan potongan. Perhitungan otomatis dari 7 item potongan dengan tips penghematan pajak."
+  },
+  "header": {
+    "title": "Pratinjau Pengembalian Pajak",
+    "subtitle": "Periksa Pengembalian Perkiraan Secara Instan",
+    "help": "Bantuan"
+  },
+  "form": {
+    "salary": "Total Penghasilan",
+    "salaryHelper": "Penghasilan kerja gabungan dan penghasilan lainnya",
+    "medical": "Biaya Medis",
+    "education": "Biaya Pendidikan",
+    "donations": "Sumbangan",
+    "creditCard": "Penggunaan Kartu Kredit",
+    "housing": "Bunga Hipotek",
+    "pension": "Asuransi Pensiun",
+    "currency": "₩",
+    "calculate": "Hitung",
+    "reset": "Setel Ulang"
+  },
+  "results": {
+    "title": "Hasil Perhitungan",
+    "refundAmount": "Pengembalian Perkiraan",
+    "breakdown": "Rincian Potongan",
+    "totalDeductions": "Total Potongan",
+    "taxableIncome": "Penghasilan Kena Pajak",
+    "premium": "Lihat Tips Penghematan Pajak AI"
+  },
+  "premium": {
+    "title": "Tips Penghematan Pajak AI",
+    "watchAd": "Tonton iklan untuk melihat tips",
+    "close": "Tutup"
+  },
+  "help": {
+    "title": "Cara Menggunakan",
+    "step1Title": "1. Masukkan Informasi Penghasilan",
+    "step1Desc": "Masukkan total penghasilan Anda (penghasilan kerja + penghasilan lainnya digabungkan).",
+    "step2Title": "2. Masukkan Potongan",
+    "step2Desc": "Masukkan biaya medis, pendidikan, sumbangan, dll Anda.",
+    "step3Title": "3. Hitung",
+    "step3Desc": "Klik \"Hitung\" untuk melihat pengembalian perkiraan Anda.",
+    "warningTitle": "Catatan Penting",
+    "warning": "• Perhitungan ini hanya untuk referensi. Konfirmasi hasil yang akurat dengan kantor pajak.\n• Tempat desimal dibulatkan.\n• Tidak termasuk pajak lokal, pajak cukai, dll."
+  },
+  "recommendations": "Coba Juga"
+}

@@ -1277,6 +1277,71 @@ body {
     color: var(--primary-light);
 }
 
+/* What-If 시나리오 비교 */
+.whatif-section {
+    margin-bottom: 20px;
+}
+
+.whatif-card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid rgba(55, 66, 250, 0.2);
+}
+
+.whatif-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+    color: var(--primary-light);
+}
+
+.whatif-scenarios {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.whatif-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: rgba(55, 66, 250, 0.06);
+    border-radius: 12px;
+    border-left: 3px solid var(--primary);
+}
+
+.whatif-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.whatif-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.whatif-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.whatif-diff {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #00b894;
+}
+
+.whatif-diff.negative {
+    color: #ff6348;
+}
+
 /* Recommendations Section */
 .recommendations-section {
     margin: 24px 0 0;

@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "Vergi İadesi Önizlemesi - Hesaplayıcı | DopaBrain",
+    "description": "2026 vergi iadesi tahmini simülasyonu. Maaş ve kesintileri girerek tahmini iadenizi anında hesapla. 7 kesinti öğesinin otomatik hesaplaması ve vergi tasarrufu ipuçları."
+  },
+  "header": {
+    "title": "Vergi İadesi Önizlemesi",
+    "subtitle": "Tahmini İadeyi Anında Kontrol Et",
+    "help": "Yardım"
+  },
+  "form": {
+    "salary": "Toplam Gelir",
+    "salaryHelper": "Kazanılan gelir ve diğer gelirler toplamı",
+    "medical": "Tıbbi Harcamalar",
+    "education": "Eğitim Harcamaları",
+    "donations": "Hayırsever Bağışlar",
+    "creditCard": "Kredi Kartı Kullanımı",
+    "housing": "İpoteka Faizi",
+    "pension": "Emeklilik Sigortası",
+    "currency": "₺",
+    "calculate": "Hesapla",
+    "reset": "Sıfırla"
+  },
+  "results": {
+    "title": "Hesaplama Sonuçları",
+    "refundAmount": "Tahmini İade",
+    "breakdown": "Kesinti Detayı",
+    "totalDeductions": "Toplam Kesintiler",
+    "taxableIncome": "Vergilendirilir Gelir",
+    "premium": "YZ Vergi Tasarrufu İpuçlarını Görüntüle"
+  },
+  "premium": {
+    "title": "YZ Vergi Tasarrufu İpuçları",
+    "watchAd": "İpuçları görmek için reklam izle",
+    "close": "Kapat"
+  },
+  "help": {
+    "title": "Nasıl Kullanılır",
+    "step1Title": "1. Gelir Bilgisini Gir",
+    "step1Desc": "Toplam geliri gir (kazanılan + diğer gelir toplamı).",
+    "step2Title": "2. Kesintileri Gir",
+    "step2Desc": "Tıbbi, eğitim, hayırsever, vb. harcamalarını gir.",
+    "step3Title": "3. Hesapla",
+    "step3Desc": "Tahmini iadesini görmek için \"Hesapla\" ya tıkla.",
+    "warningTitle": "Önemli Notlar",
+    "warning": "• Bu hesaplama sadece referans amaçlıdır. Kesin sonuçları vergi dairesi ile doğrula.\n• Ondalık basamaklar yuvarlanır.\n• Yerel vergiler, tüketim vergileri vb. içermez."
+  },
+  "recommendations": "Bunları da Dene"
+}

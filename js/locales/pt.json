@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "Visualização de Devolução de Impostos - Calculadora | DopaBrain",
+    "description": "Simulação de estimativa de devolução de impostos de 2026. Calcule a devolução estimada instantaneamente inserindo salário e deduções. Cálculo automático de 7 itens de dedução com dicas de economia de impostos."
+  },
+  "header": {
+    "title": "Visualização de Devolução de Impostos",
+    "subtitle": "Verifique Devolução Estimada Instantaneamente",
+    "help": "Ajuda"
+  },
+  "form": {
+    "salary": "Renda Total",
+    "salaryHelper": "Renda de trabalho combinada e outras rendas",
+    "medical": "Despesas Médicas",
+    "education": "Despesas de Educação",
+    "donations": "Doações",
+    "creditCard": "Uso de Cartão de Crédito",
+    "housing": "Juros de Hipoteca",
+    "pension": "Seguro de Pensão",
+    "currency": "₩",
+    "calculate": "Calcular",
+    "reset": "Redefinir"
+  },
+  "results": {
+    "title": "Resultados do Cálculo",
+    "refundAmount": "Devolução Estimada",
+    "breakdown": "Detalhamento de Deduções",
+    "totalDeductions": "Total de Deduções",
+    "taxableIncome": "Renda Tributável",
+    "premium": "Ver Dicas de Economia de Impostos com IA"
+  },
+  "premium": {
+    "title": "Dicas de Economia de Impostos com IA",
+    "watchAd": "Assistir um anúncio para ver dicas",
+    "close": "Fechar"
+  },
+  "help": {
+    "title": "Como Usar",
+    "step1Title": "1. Insira Informações de Renda",
+    "step1Desc": "Insira sua renda total (renda do trabalho + outras rendas combinadas).",
+    "step2Title": "2. Insira Deduções",
+    "step2Desc": "Insira suas despesas médicas, educação, doações, etc.",
+    "step3Title": "3. Calcular",
+    "step3Desc": "Clique em \"Calcular\" para ver sua devolução estimada.",
+    "warningTitle": "Notas Importantes",
+    "warning": "• Este cálculo é apenas para referência. Confirme resultados exatos com a autoridade fiscal.\n• Casas decimais são arredondadas.\n• Não inclui impostos locais, impostos especiais, etc."
+  },
+  "recommendations": "Experimente também"
+}

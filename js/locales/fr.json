@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "Aperçu du Remboursement d'Impôts - Calculatrice | DopaBrain",
+    "description": "Simulation d'estimation du remboursement d'impôts 2026. Calcule le remboursement estimé instantanément en entrant le salaire et les déductions. Calcul automatique de 7 postes de déduction avec conseils d'économies d'impôts."
+  },
+  "header": {
+    "title": "Aperçu du Remboursement d'Impôts",
+    "subtitle": "Vérifier le Remboursement Estimé Instantanément",
+    "help": "Aide"
+  },
+  "form": {
+    "salary": "Revenu Total",
+    "salaryHelper": "Revenu du travail combiné et autres revenus",
+    "medical": "Dépenses Médicales",
+    "education": "Dépenses d'Éducation",
+    "donations": "Dons",
+    "creditCard": "Utilisation de Carte de Crédit",
+    "housing": "Intérêt Hypothécaire",
+    "pension": "Assurance Retraite",
+    "currency": "₩",
+    "calculate": "Calculer",
+    "reset": "Réinitialiser"
+  },
+  "results": {
+    "title": "Résultats du Calcul",
+    "refundAmount": "Remboursement Estimé",
+    "breakdown": "Ventilation des Déductions",
+    "totalDeductions": "Déductions Totales",
+    "taxableIncome": "Revenu Imposable",
+    "premium": "Voir les Conseils d'Économies d'Impôts IA"
+  },
+  "premium": {
+    "title": "Conseils d'Économies d'Impôts IA",
+    "watchAd": "Regarde une annonce pour voir les conseils",
+    "close": "Fermer"
+  },
+  "help": {
+    "title": "Comment Utiliser",
+    "step1Title": "1. Entrez les Informations de Revenu",
+    "step1Desc": "Entrez ton revenu total (revenu du travail + autres revenus combinés).",
+    "step2Title": "2. Entrez les Déductions",
+    "step2Desc": "Entrez tes dépenses médicales, d'éducation, de dons, etc.",
+    "step3Title": "3. Calculer",
+    "step3Desc": "Clique sur \"Calculer\" pour voir ton remboursement estimé.",
+    "warningTitle": "Notes Importantes",
+    "warning": "• Ce calcul est fourni à titre informatif uniquement. Confirme les résultats exacts auprès du bureau des impôts.\n• Les décimales sont arrondies.\n• N'inclut pas les taxes locales, les accises, etc."
+  },
+  "recommendations": "Essaie aussi"
+}

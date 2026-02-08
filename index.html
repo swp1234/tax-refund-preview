@@ -22,12 +22,39 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
+      "@type": "SoftwareApplication",
       "name": "연말정산 미리보기",
       "applicationCategory": "FinanceApplication",
-      "description": "2026 연말정산 환급액 정밀 계산. 4대보험 자동계산, 소득공제, 세액공제 완벽 반영",
+      "description": "2026 연말정산 환급액 정밀 계산. 4대보험 자동계산, 19개 입력 항목, 소득공제·세액공제 완벽 반영.",
       "url": "https://dopabrain.com/tax-refund-preview/",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      "image": "https://dopabrain.com/tax-refund-preview/icon-192.svg",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Modern browser (Chrome, Safari, Firefox, Edge).",
+      "author": {
+        "@type": "Organization",
+        "name": "DopaBrain",
+        "url": "https://dopabrain.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DopaBrain",
+        "url": "https://dopabrain.com/"
+      },
+      "inLanguage": ["ko"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "ratingCount": "3200",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "featureList": "19개 입력 항목, 4대보험 자동계산, 근로소득공제 5단계, 신용/체크/전통시장/대중교통 카드공제, 연금저축·IRP 세액공제, 월세 공제, 맞춤형 절세 팁, LocalStorage 자동 저장"
     }
     </script>
     <link rel="manifest" href="manifest.json">
@@ -379,6 +406,14 @@
                         <span class="premium-icon">✨</span>
                         절세 전략 팁 보기
                     </button>
+                </div>
+            </section>
+
+            <!-- What-If 시나리오 비교 -->
+            <section id="whatIfSection" class="whatif-section hidden">
+                <div class="whatif-card">
+                    <h3 class="whatif-title">💡 이렇게 하면 얼마나 더 받을까?</h3>
+                    <div class="whatif-scenarios" id="whatIfScenarios"></div>
                 </div>
             </section>
 

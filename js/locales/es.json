@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "Vista Previa de Reembolso de Impuestos - Calculadora | DopaBrain",
+    "description": "Simulación de estimación de reembolso de impuestos 2026. Calcula el reembolso estimado instantáneamente ingresando salario y deducciones. Cálculo automático de 7 elementos de deducción con consejos de ahorro fiscal."
+  },
+  "header": {
+    "title": "Vista Previa de Reembolso de Impuestos",
+    "subtitle": "Verifica el Reembolso Estimado al Instante",
+    "help": "Ayuda"
+  },
+  "form": {
+    "salary": "Ingresos Totales",
+    "salaryHelper": "Ingresos laborales combinados y otros ingresos",
+    "medical": "Gastos Médicos",
+    "education": "Gastos de Educación",
+    "donations": "Donaciones",
+    "creditCard": "Uso de Tarjeta de Crédito",
+    "housing": "Interés Hipotecario",
+    "pension": "Seguro de Pensión",
+    "currency": "₩",
+    "calculate": "Calcular",
+    "reset": "Reiniciar"
+  },
+  "results": {
+    "title": "Resultados del Cálculo",
+    "refundAmount": "Reembolso Estimado",
+    "breakdown": "Desglose de Deducción",
+    "totalDeductions": "Total de Deducciones",
+    "taxableIncome": "Ingresos Imponibles",
+    "premium": "Ver Consejos de Ahorro Fiscal de IA"
+  },
+  "premium": {
+    "title": "Consejos de Ahorro Fiscal de IA",
+    "watchAd": "Ver un anuncio para ver consejos",
+    "close": "Cerrar"
+  },
+  "help": {
+    "title": "Cómo Usar",
+    "step1Title": "1. Ingresar Información de Ingresos",
+    "step1Desc": "Ingresa tu ingreso total (ingresos laborales + otros ingresos combinados).",
+    "step2Title": "2. Ingresar Deducciones",
+    "step2Desc": "Ingresa tus gastos médicos, educación, donaciones, etc.",
+    "step3Title": "3. Calcular",
+    "step3Desc": "Haz clic en \"Calcular\" para ver tu reembolso estimado.",
+    "warningTitle": "Notas Importantes",
+    "warning": "• Este cálculo es solo para referencia. Confirma resultados exactos con la oficina fiscal.\n• Los decimales se redondean.\n• No incluye impuestos locales, impuestos especiales, etc."
+  },
+  "recommendations": "Prueba Estos También"
+}

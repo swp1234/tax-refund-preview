@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "Steuererstattung Vorschau - Rechner | DopaBrain",
+    "description": "2026 Steuererstattungsschätzungs-Simulation. Berechne geschätzte Rückerstattung sofort durch Eingabe von Gehalt und Abzügen. Automatische Berechnung von 7 Abzugspositionen mit Steuerersparnistipps."
+  },
+  "header": {
+    "title": "Steuererstattung Vorschau",
+    "subtitle": "Überprüfe geschätzte Rückerstattung sofort",
+    "help": "Hilfe"
+  },
+  "form": {
+    "salary": "Gesamteinkommen",
+    "salaryHelper": "Kombiniertes Erwerbseinkommen und anderes Einkommen",
+    "medical": "Medizinische Ausgaben",
+    "education": "Bildungsausgaben",
+    "donations": "Spenden",
+    "creditCard": "Kreditkartennutzung",
+    "housing": "Hypothekenzins",
+    "pension": "Rentenversicherung",
+    "currency": "₩",
+    "calculate": "Berechnen",
+    "reset": "Zurücksetzen"
+  },
+  "results": {
+    "title": "Berechnungsergebnisse",
+    "refundAmount": "Geschätzte Rückerstattung",
+    "breakdown": "Abzugsaufschlüsselung",
+    "totalDeductions": "Gesamtabzüge",
+    "taxableIncome": "Steuerbares Einkommen",
+    "premium": "KI Steuerersparnis-Tipps anzeigen"
+  },
+  "premium": {
+    "title": "KI Steuerersparnis-Tipps",
+    "watchAd": "Schau eine Anzeige um Tipps zu sehen",
+    "close": "Schließen"
+  },
+  "help": {
+    "title": "So verwendest du es",
+    "step1Title": "1. Gib Einkommensinformationen ein",
+    "step1Desc": "Gib dein Gesamteinkommen ein (verdientes + anderes Einkommen kombiniert).",
+    "step2Title": "2. Gib Abzüge ein",
+    "step2Desc": "Gib deine medizinischen, Bildungs-, Spendenausgaben usw. ein.",
+    "step3Title": "3. Berechnen",
+    "step3Desc": "Klicke \"Berechnen\" um deine geschätzte Rückerstattung zu sehen.",
+    "warningTitle": "Wichtige Hinweise",
+    "warning": "• Diese Berechnung ist nur zur Information. Bestätige genaue Ergebnisse beim Finanzamt.\n• Dezimalstellen werden gerundet.\n• Beinhaltet keine Kommunalsteuern, Verbrauchssteuern usw."
+  },
+  "recommendations": "Probiere auch diese"
+}

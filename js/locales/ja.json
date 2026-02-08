@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "税務還付プレビュー - 計算機 | DopaBrain",
+    "description": "2026年税務還付推定シミュレーション。給与と控除を入力して即座に推定還付額を計算。7つの控除項目を自動計算し、節税のコツを提供。"
+  },
+  "header": {
+    "title": "税務還付プレビュー",
+    "subtitle": "推定還付額を今すぐチェック",
+    "help": "ヘルプ"
+  },
+  "form": {
+    "salary": "総所得",
+    "salaryHelper": "給与所得と他の所得の合計",
+    "medical": "医療費",
+    "education": "教育費",
+    "donations": "寄付金",
+    "creditCard": "クレジットカード利用額",
+    "housing": "住宅ローン金利",
+    "pension": "年金保険",
+    "currency": "₩",
+    "calculate": "計算",
+    "reset": "リセット"
+  },
+  "results": {
+    "title": "計算結果",
+    "refundAmount": "推定還付額",
+    "breakdown": "控除内訳",
+    "totalDeductions": "合計控除額",
+    "taxableIncome": "課税所得",
+    "premium": "AI節税のコツを表示"
+  },
+  "premium": {
+    "title": "AI節税のコツ",
+    "watchAd": "広告を見てコツを確認",
+    "close": "閉じる"
+  },
+  "help": {
+    "title": "使い方",
+    "step1Title": "1. 所得情報を入力",
+    "step1Desc": "総所得（給与所得＋他の所得の合計）を入力します。",
+    "step2Title": "2. 控除額を入力",
+    "step2Desc": "医療費、教育費、寄付金などを入力します。",
+    "step3Title": "3. 計算",
+    "step3Desc": "「計算」をクリックして推定還付額を確認します。",
+    "warningTitle": "重要な注記",
+    "warning": "・この計算は参考です。正確な結果は税務署で確認してください。\n・小数点以下は四捨五入されます。\n・地方税、物品税などは含まれていません。"
+  },
+  "recommendations": "こちらも試してみてください"
+}

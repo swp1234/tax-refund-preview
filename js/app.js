@@ -289,6 +289,9 @@ function handleCalculate() {
     // Display results
     displayResults(result, data);
 
+    // What-If 시나리오
+    displayWhatIf(result, data, taxableSalary);
+
     // Scroll to results
     elements.resultsSection.scrollIntoView({ behavior: 'smooth' });
 }
@@ -429,6 +432,94 @@ function updateSectionSummaries(result, data) {
     // Tax credit summary
     const taxCreditAmount = calculateDetailedTaxCredit(data.deductions) + (Math.min(data.children, 2) * 150000) + (Math.max(0, data.children - 2) * 300000);
     elements.taxCreditSummary.textContent = `세액공제 ${formatMoney(taxCreditAmount)}원`;
+}
+
+// ===== WHAT-IF 시나리오 =====
+function displayWhatIf(baseResult, data, taxableSalary) {
+    const whatIfSection = document.getElementById('whatIfSection');
+    const scenariosEl = document.getElementById('whatIfScenarios');
+    if (!whatIfSection || !scenariosEl) return;
+
+    const baseLocalTax = Math.round(baseResult.finalTax * 0.1);
+    const baseTotal = baseResult.refund - baseLocalTax;
+    const scenarios = [];
+
+    // 시나리오 1: 연금저축 400만원 추가 (세액공제 16.5%)
+    const currentPension = data.deductions.pensionSaving || 0;
+    if (currentPension < 4000000) {
+        const additionalPension = 4000000 - currentPension;
+        const pensionBenefit = Math.round(additionalPension * 0.165);
+        scenarios.push({
+            icon: '🏦',
+            label: `연금저축 ${formatMoney(additionalPension)}원 추가 시`,
+            diff: pensionBenefit
+        });
+    }
+
+    // 시나리오 2: IRP 300만원 추가
+    const currentIRP = data.deductions.irp || 0;
+    if (currentIRP < 3000000) {
+        const additionalIRP = 3000000 - currentIRP;
+        const irpBenefit = Math.round(additionalIRP * 0.165);
+        scenarios.push({
+            icon: '💼',
+            label: `IRP ${formatMoney(additionalIRP)}원 추가 시`,
+            diff: irpBenefit
+        });
+    }
+
+    // 시나리오 3: 체크카드 비율 높이기 (체크카드가 신용카드보다 공제율 높음)
+    const currentCredit = data.deductions.creditCard || 0;
+    const currentDebit = data.deductions.debitCard || 0;
+    if (currentCredit > 0 && currentCredit > currentDebit) {
+        const switchAmount = Math.round(currentCredit * 0.3);
+        // 신용카드 15% → 체크카드 30%로 변환 시 추가 공제
+        const additionalDeduction = Math.round(switchAmount * 0.15);
+        const benefit = Math.round(additionalDeduction * 0.15);
+        if (benefit > 0) {
+            scenarios.push({
+                icon: '💳',
+                label: `체크카드 비율 30% 높이면`,
+                diff: benefit
+            });
+        }
+    }
+
+    // 시나리오 4: 월세 공제 (현재 없는 경우)
+    if (!data.deductions.monthlyRent || data.deductions.monthlyRent === 0) {
+        if (data.salary <= 70000000) {
+            const estimatedRent = 6000000; // 월 50만 × 12개월
+            const rentBenefit = Math.round(estimatedRent * 0.17);
+            scenarios.push({
+                icon: '🏠',
+                label: `월세 50만원 공제 신청 시`,
+                diff: rentBenefit
+            });
+        }
+    }
+
+    if (scenarios.length === 0) {
+        whatIfSection.classList.add('hidden');
+        return;
+    }
+
+    let html = '';
+    scenarios.forEach(s => {
+        const sign = s.diff >= 0 ? '+' : '';
+        const cls = s.diff >= 0 ? '' : ' negative';
+        html += `
+            <div class="whatif-item">
+                <span class="whatif-icon">${s.icon}</span>
+                <div class="whatif-info">
+                    <span class="whatif-label">${s.label}</span>
+                    <span class="whatif-diff${cls}">${sign}${formatMoney(s.diff)}원 절세 가능</span>
+                </div>
+            </div>
+        `;
+    });
+
+    scenariosEl.innerHTML = html;
+    whatIfSection.classList.remove('hidden');
 }
 
 // ===== RESET FORM =====
