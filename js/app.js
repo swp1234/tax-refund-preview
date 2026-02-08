@@ -1,3 +1,44 @@
+// ===== LANGUAGE SETUP =====
+function setupLanguageSelector() {
+    const langToggle = document.getElementById('lang-toggle');
+    const langMenu = document.getElementById('lang-menu');
+    const langOptions = document.querySelectorAll('.lang-option');
+
+    if (!langToggle || !langMenu) return;
+
+    // Set active language on page load
+    const currentLang = typeof i18n !== 'undefined' ? i18n.getCurrentLanguage() : 'ko';
+    const currentLangBtn = document.querySelector(`[data-lang="${currentLang}"]`);
+    if (currentLangBtn) currentLangBtn.classList.add('active');
+
+    // Toggle language menu
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            langMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Close menu on outside click
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.language-selector')) {
+            langMenu.classList.add('hidden');
+        }
+    });
+
+    // Handle language change
+    langOptions.forEach(opt => {
+        opt.addEventListener('click', async () => {
+            const lang = opt.getAttribute('data-lang');
+            if (typeof i18n !== 'undefined') {
+                await i18n.setLanguage(lang);
+                langOptions.forEach(o => o.classList.remove('active'));
+                opt.classList.add('active');
+                langMenu.classList.add('hidden');
+            }
+        });
+    });
+}
+
 // ===== MONEY INPUT UTILITIES =====
 function parseMoney(str) {
     const cleaned = str.toString().replace(/[^\d.-]/g, '');
@@ -728,6 +769,7 @@ function initApp() {
     loadFormData();
 
     // Setup UI components
+    setupLanguageSelector();
     setupMoneyInputs();
     setupAccordion();
     setupToggleButtons();
