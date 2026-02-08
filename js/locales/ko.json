@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "연말정산 미리보기 - 환급액 계산기 | DopaBrain",
+    "description": "2026 연말정산 예상 환급액 시뮬레이션. 급여, 공제액 입력으로 즉시 환급액 계산. 7개 공제항목 자동 계산, 환급액 최대화 팁 제공."
+  },
+  "header": {
+    "title": "연말정산 미리보기",
+    "subtitle": "예상 환급액 즉시 확인",
+    "help": "도움말"
+  },
+  "form": {
+    "salary": "총 급여액",
+    "salaryHelper": "근로소득과 기타소득을 합산한 금액",
+    "medical": "의료비",
+    "education": "교육비",
+    "donations": "기부금",
+    "creditCard": "신용카드",
+    "housing": "주택담보",
+    "pension": "연금보험",
+    "currency": "원",
+    "calculate": "계산하기",
+    "reset": "초기화"
+  },
+  "results": {
+    "title": "계산 결과",
+    "refundAmount": "예상 환급액",
+    "breakdown": "공제액 내역",
+    "totalDeductions": "총 공제액",
+    "taxableIncome": "과세표준",
+    "premium": "AI 세금 절약 팁 보기"
+  },
+  "premium": {
+    "title": "AI 세금 절약 팁",
+    "watchAd": "광고를 시청하고 팁을 확인하세요",
+    "close": "닫기"
+  },
+  "help": {
+    "title": "사용 방법",
+    "step1Title": "1. 소득 정보 입력",
+    "step1Desc": "근로소득과 기타소득을 합산한 총 급여액을 입력하세요.",
+    "step2Title": "2. 공제액 입력",
+    "step2Desc": "본인이 지출한 의료비, 교육비, 기부금 등을 입력합니다.",
+    "step3Title": "3. 계산하기",
+    "step3Desc": "\"계산하기\" 버튼을 눌러 예상 환급액을 확인하세요.",
+    "warningTitle": "주의사항",
+    "warning": "• 본 계산은 참고용이며 정확한 결과는 국세청 신고 후 확인하세요\n• 소수점 이하는 생략됩니다\n• 지역세, 특별소비세 등 추가 세금은 포함되지 않습니다"
+  },
+  "recommendations": "이것도 해보세요"
+}

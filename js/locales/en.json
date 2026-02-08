@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "Tax Refund Preview - Calculator | DopaBrain",
+    "description": "2026 tax refund estimate simulation. Calculate estimated refund instantly by entering salary and deductions. Automatic calculation of 7 deduction items with tax savings tips."
+  },
+  "header": {
+    "title": "Tax Refund Preview",
+    "subtitle": "Check Estimated Refund Instantly",
+    "help": "Help"
+  },
+  "form": {
+    "salary": "Total Income",
+    "salaryHelper": "Combined earned income and other income",
+    "medical": "Medical Expenses",
+    "education": "Education Expenses",
+    "donations": "Donations",
+    "creditCard": "Credit Card Usage",
+    "housing": "Mortgage Interest",
+    "pension": "Pension Insurance",
+    "currency": "₩",
+    "calculate": "Calculate",
+    "reset": "Reset"
+  },
+  "results": {
+    "title": "Calculation Results",
+    "refundAmount": "Estimated Refund",
+    "breakdown": "Deduction Breakdown",
+    "totalDeductions": "Total Deductions",
+    "taxableIncome": "Taxable Income",
+    "premium": "View AI Tax Savings Tips"
+  },
+  "premium": {
+    "title": "AI Tax Savings Tips",
+    "watchAd": "Watch an ad to see tips",
+    "close": "Close"
+  },
+  "help": {
+    "title": "How to Use",
+    "step1Title": "1. Enter Income Information",
+    "step1Desc": "Enter your total income (earned + other income combined).",
+    "step2Title": "2. Enter Deductions",
+    "step2Desc": "Enter your medical, education, donation expenses, etc.",
+    "step3Title": "3. Calculate",
+    "step3Desc": "Click \"Calculate\" to see your estimated refund.",
+    "warningTitle": "Important Notes",
+    "warning": "• This calculation is for reference only. Confirm exact results with the tax office.\n• Decimal places are rounded.\n• Does not include local taxes, excise taxes, etc."
+  },
+  "recommendations": "Try These Too"
+}

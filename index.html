@@ -43,6 +43,17 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
 </head>
 <body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="lang-btn" id="langBtn" title="Language">🌐</button>
+        <div class="lang-menu hidden" id="langMenu">
+            <button class="lang-option active" data-lang="ko">한국어</button>
+            <button class="lang-option" data-lang="en">English</button>
+            <button class="lang-option" data-lang="zh">简体中文</button>
+            <button class="lang-option" data-lang="hi">हिन्दी</button>
+            <button class="lang-option" data-lang="ru">Русский</button>
+        </div>
+    </div>
     <div class="container">
         <!-- Ad Banner Top -->
         <div class="ad-banner ad-top">
@@ -52,10 +63,10 @@
         <!-- Header -->
         <header class="header">
             <div class="header-content">
-                <h1 class="title">연말정산 미리보기</h1>
-                <p class="subtitle">예상 환급액 즉시 확인</p>
+                <h1 class="title" data-i18n="header.title">연말정산 미리보기</h1>
+                <p class="subtitle" data-i18n="header.subtitle">예상 환급액 즉시 확인</p>
             </div>
-            <button class="help-btn" id="helpBtn" aria-label="도움말">?</button>
+            <button class="help-btn" id="helpBtn" aria-label="도움말" data-i18n-title="header.help">?</button>
         </header>
 
         <!-- Main Content -->
@@ -64,8 +75,8 @@
             <section class="input-section">
                 <div class="form-group">
                     <label for="salary" class="label">
-                        <span class="label-text">총 급여액</span>
-                        <span class="currency">원</span>
+                        <span class="label-text" data-i18n="form.salary">총 급여액</span>
+                        <span class="currency" data-i18n="form.currency">원</span>
                     </label>
                     <div class="input-wrapper">
                         <input
@@ -77,14 +88,14 @@
                             aria-label="총 급여액"
                         >
                     </div>
-                    <small class="helper-text">근로소득과 기타소득을 합산한 금액</small>
+                    <small class="helper-text" data-i18n="form.salaryHelper">근로소득과 기타소득을 합산한 금액</small>
                 </div>
 
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="medical" class="label">
-                            <span class="label-text">의료비</span>
-                            <span class="currency">원</span>
+                            <span class="label-text" data-i18n="form.medical">의료비</span>
+                            <span class="currency" data-i18n="form.currency">원</span>
                         </label>
                         <div class="input-wrapper">
                             <input
@@ -100,8 +111,8 @@
 
                     <div class="form-group">
                         <label for="education" class="label">
-                            <span class="label-text">교육비</span>
-                            <span class="currency">원</span>
+                            <span class="label-text" data-i18n="form.education">교육비</span>
+                            <span class="currency" data-i18n="form.currency">원</span>
                         </label>
                         <div class="input-wrapper">
                             <input
@@ -117,8 +128,8 @@
 
                     <div class="form-group">
                         <label for="donations" class="label">
-                            <span class="label-text">기부금</span>
-                            <span class="currency">원</span>
+                            <span class="label-text" data-i18n="form.donations">기부금</span>
+                            <span class="currency" data-i18n="form.currency">원</span>
                         </label>
                         <div class="input-wrapper">
                             <input
@@ -134,8 +145,8 @@
 
                     <div class="form-group">
                         <label for="creditCard" class="label">
-                            <span class="label-text">신용카드</span>
-                            <span class="currency">원</span>
+                            <span class="label-text" data-i18n="form.creditCard">신용카드</span>
+                            <span class="currency" data-i18n="form.currency">원</span>
                         </label>
                         <div class="input-wrapper">
                             <input
@@ -151,8 +162,8 @@
 
                     <div class="form-group">
                         <label for="housing" class="label">
-                            <span class="label-text">주택담보</span>
-                            <span class="currency">원</span>
+                            <span class="label-text" data-i18n="form.housing">주택담보</span>
+                            <span class="currency" data-i18n="form.currency">원</span>
                         </label>
                         <div class="input-wrapper">
                             <input
@@ -168,8 +179,8 @@
 
                     <div class="form-group">
                         <label for="pension" class="label">
-                            <span class="label-text">연금보험</span>
-                            <span class="currency">원</span>
+                            <span class="label-text" data-i18n="form.pension">연금보험</span>
+                            <span class="currency" data-i18n="form.currency">원</span>
                         </label>
                         <div class="input-wrapper">
                             <input
@@ -185,10 +196,10 @@
                 </div>
 
                 <div class="button-group">
-                    <button id="calculateBtn" class="btn btn-primary" aria-label="계산하기">
+                    <button id="calculateBtn" class="btn btn-primary" aria-label="계산하기" data-i18n="form.calculate">
                         계산하기
                     </button>
-                    <button id="resetBtn" class="btn btn-secondary" aria-label="초기화">
+                    <button id="resetBtn" class="btn btn-secondary" aria-label="초기화" data-i18n="form.reset">
                         초기화
                     </button>
                 </div>
@@ -198,19 +209,19 @@
             <section id="resultsSection" class="results-section hidden">
                 <div class="results-card">
                     <div class="results-header">
-                        <h2>계산 결과</h2>
+                        <h2 data-i18n="results.title">계산 결과</h2>
                     </div>
 
                     <div class="results-main">
                         <div class="result-item" id="mainResult">
-                            <div class="result-label">예상 환급액</div>
+                            <div class="result-label" data-i18n="results.refundAmount">예상 환급액</div>
                             <div class="result-value" id="refundAmount">0 원</div>
                             <div class="result-status" id="resultStatus"></div>
                         </div>
                     </div>
 
                     <div class="results-breakdown">
-                        <h3>공제액 내역</h3>
+                        <h3 data-i18n="results.breakdown">공제액 내역</h3>
                         <div class="breakdown-list" id="breakdownList">
                             <!-- Dynamically filled -->
                         </div>
@@ -218,16 +229,16 @@
 
                     <div class="results-stats">
                         <div class="stat-item">
-                            <span class="stat-label">총 공제액</span>
+                            <span class="stat-label" data-i18n="results.totalDeductions">총 공제액</span>
                             <span class="stat-value" id="totalDeductions">0 원</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">과세표준</span>
+                            <span class="stat-label" data-i18n="results.taxableIncome">과세표준</span>
                             <span class="stat-value" id="taxableIncome">0 원</span>
                         </div>
                     </div>
 
-                    <button id="premiumBtn" class="btn btn-premium">
+                    <button id="premiumBtn" class="btn btn-premium" data-i18n="results.premium">
                         <span class="premium-icon">✨</span>
                         AI 세금 절약 팁 보기
                     </button>
@@ -236,7 +247,7 @@
 
             <!-- Recommendations Section -->
             <div class="recommendations-section">
-                <div class="rec-title">이것도 해보세요</div>
+                <div class="rec-title" data-i18n="recommendations">이것도 해보세요</div>
                 <div class="rec-grid">
                     <a href="https://dopabrain.com/shopping-calc/" class="rec-card" target="_blank">
                         <span class="rec-icon">🛍️</span>
@@ -281,7 +292,7 @@
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <div class="modal-header">
-                <h2>AI 세금 절약 팁</h2>
+                <h2 data-i18n="premium.title">AI 세금 절약 팁</h2>
                 <button class="modal-close" id="closeModal" aria-label="닫기">×</button>
             </div>
             <div class="modal-ad" id="premiumAd">
@@ -289,14 +300,14 @@
                     <div class="countdown-circle">
                         <span id="countdownNumber">5</span>초
                     </div>
-                    <p>광고를 시청하고 팁을 확인하세요</p>
+                    <p data-i18n="premium.watchAd">광고를 시청하고 팁을 확인하세요</p>
                 </div>
             </div>
             <div class="modal-tips hidden" id="tipsContent">
                 <div class="tips-list">
                     <!-- Dynamically filled by JavaScript -->
                 </div>
-                <button class="btn btn-primary" id="closeTipsBtn">닫기</button>
+                <button class="btn btn-primary" id="closeTipsBtn" data-i18n="premium.close">닫기</button>
             </div>
         </div>
     </div>
@@ -306,25 +317,25 @@
         <div class="modal-overlay"></div>
         <div class="modal-content help-modal">
             <div class="modal-header">
-                <h2>사용 방법</h2>
+                <h2 data-i18n="help.title">사용 방법</h2>
                 <button class="modal-close" id="closeHelpModal" aria-label="닫기">×</button>
             </div>
             <div class="help-content">
                 <div class="help-item">
-                    <h3>1. 소득 정보 입력</h3>
-                    <p>근로소득과 기타소득을 합산한 총 급여액을 입력하세요.</p>
+                    <h3 data-i18n="help.step1Title">1. 소득 정보 입력</h3>
+                    <p data-i18n="help.step1Desc">근로소득과 기타소득을 합산한 총 급여액을 입력하세요.</p>
                 </div>
                 <div class="help-item">
-                    <h3>2. 공제액 입력</h3>
-                    <p>본인이 지출한 의료비, 교육비, 기부금 등을 입력합니다.</p>
+                    <h3 data-i18n="help.step2Title">2. 공제액 입력</h3>
+                    <p data-i18n="help.step2Desc">본인이 지출한 의료비, 교육비, 기부금 등을 입력합니다.</p>
                 </div>
                 <div class="help-item">
-                    <h3>3. 계산하기</h3>
-                    <p>"계산하기" 버튼을 눌러 예상 환급액을 확인하세요.</p>
+                    <h3 data-i18n="help.step3Title">3. 계산하기</h3>
+                    <p data-i18n="help.step3Desc">"계산하기" 버튼을 눌러 예상 환급액을 확인하세요.</p>
                 </div>
                 <div class="help-item">
-                    <h3>주의사항</h3>
-                    <p>• 본 계산은 참고용이며 정확한 결과는 국세청 신고 후 확인하세요<br>
+                    <h3 data-i18n="help.warningTitle">주의사항</h3>
+                    <p data-i18n="help.warning">• 본 계산은 참고용이며 정확한 결과는 국세청 신고 후 확인하세요<br>
                     • 소수점 이하는 생략됩니다<br>
                     • 지역세, 특별소비세 등 추가 세금은 포함되지 않습니다</p>
                 </div>
@@ -332,7 +343,43 @@
         </div>
     </div>
 
+    <script src="js/i18n.js"></script>
     <script src="js/tax-data.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        // Initialize i18n and load translations
+        async function initI18n() {
+            await i18n.loadTranslations(i18n.currentLang);
+            i18n.updateUI();
+
+            // Language selector event listeners
+            const langBtn = document.getElementById('langBtn');
+            const langMenu = document.getElementById('langMenu');
+            const langOptions = document.querySelectorAll('.lang-option');
+
+            langBtn.addEventListener('click', () => {
+                langMenu.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.language-selector')) {
+                    langMenu.classList.add('hidden');
+                }
+            });
+
+            langOptions.forEach(option => {
+                option.addEventListener('click', async () => {
+                    const lang = option.getAttribute('data-lang');
+                    await i18n.setLanguage(lang);
+
+                    langOptions.forEach(o => o.classList.remove('active'));
+                    option.classList.add('active');
+                    langMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        initI18n();
+    </script>
 </body>
 </html>

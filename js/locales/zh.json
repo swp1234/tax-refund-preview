@@ -1,0 +1,49 @@
+{
+  "app": {
+    "title": "税务退款预览 - 计算器 | DopaBrain",
+    "description": "2026年税务退款估计模拟。输入工资和扣除额即可立即计算预计退款。7项扣除自动计算，提供税款节省提示。"
+  },
+  "header": {
+    "title": "税务退款预览",
+    "subtitle": "立即查看预计退款",
+    "help": "帮助"
+  },
+  "form": {
+    "salary": "总收入",
+    "salaryHelper": "合并的工资收入和其他收入",
+    "medical": "医疗费用",
+    "education": "教育费用",
+    "donations": "捐赠",
+    "creditCard": "信用卡消费",
+    "housing": "房屋贷款利息",
+    "pension": "养老保险",
+    "currency": "¥",
+    "calculate": "计算",
+    "reset": "重置"
+  },
+  "results": {
+    "title": "计算结果",
+    "refundAmount": "预计退款",
+    "breakdown": "扣除明细",
+    "totalDeductions": "总扣除额",
+    "taxableIncome": "应税收入",
+    "premium": "查看AI税务节省提示"
+  },
+  "premium": {
+    "title": "AI税务节省提示",
+    "watchAd": "观看广告查看提示",
+    "close": "关闭"
+  },
+  "help": {
+    "title": "使用方法",
+    "step1Title": "1. 输入收入信息",
+    "step1Desc": "输入您的总收入（合并工资和其他收入）。",
+    "step2Title": "2. 输入扣除额",
+    "step2Desc": "输入您的医疗、教育、捐赠等费用。",
+    "step3Title": "3. 计算",
+    "step3Desc": "点击\"计算\"查看您的预计退款。",
+    "warningTitle": "重要提示",
+    "warning": "• 此计算仅供参考。请与税务机关确认准确结果。\n• 小数位已四舍五入。\n• 不包括地方税、消费税等。"
+  },
+  "recommendations": "也试试这些"
+}
