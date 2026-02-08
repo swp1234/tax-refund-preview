@@ -59,8 +59,15 @@ function calculateTax(salary, deductions) {
     // 7. 최종 세액
     const finalTax = Math.max(0, calculatedTax - taxCredit);
 
-    // 8. 원천징수액 (근로소득세)
-    const withheldTax = salary * 0.03; // 근로소득세 약 3%
+    // 8. 원천징수액 (근로소득 간이세액표 근사)
+    const monthlySalary = salary / 12;
+    let monthlyWithheld = 0;
+    if (monthlySalary <= 1500000) monthlyWithheld = 0;
+    else if (monthlySalary <= 3000000) monthlyWithheld = (monthlySalary - 1500000) * 0.02;
+    else if (monthlySalary <= 5000000) monthlyWithheld = 30000 + (monthlySalary - 3000000) * 0.04;
+    else if (monthlySalary <= 8000000) monthlyWithheld = 110000 + (monthlySalary - 5000000) * 0.06;
+    else monthlyWithheld = 290000 + (monthlySalary - 8000000) * 0.08;
+    const withheldTax = monthlyWithheld * 12;
 
     // 9. 환급액 또는 추가납부액
     const refund = withheldTax - finalTax;
