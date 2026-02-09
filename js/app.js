@@ -49,10 +49,46 @@ function formatMoney(num) {
     return new Intl.NumberFormat('ko-KR').format(num);
 }
 
+// ===== ANIMATE COUNT UP =====
+function animateCountUp(element, targetValue, duration = 1000) {
+    const startValue = 0;
+    const startTime = Date.now();
+
+    function update() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+        const currentValue = Math.floor(startValue + (targetValue - startValue) * easeProgress);
+        element.textContent = formatMoney(currentValue) + '원';
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
+    }
+
+    update();
+}
+
+// ===== UPDATE HERO PROOF =====
+function updateHeroProof() {
+    const heroProof = document.getElementById('heroProof');
+    if (heroProof) {
+        let countText = '0명이';
+        if (calculationCount === 1) countText = '1명이';
+        else if (calculationCount < 10) countText = calculationCount + '명이';
+        else if (calculationCount < 100) countText = Math.floor(calculationCount / 10) * 10 + '명이';
+        else countText = Math.floor(calculationCount / 100) * 100 + '명이';
+
+        heroProof.textContent = '📊 ' + countText + ' 계산했어요';
+    }
+}
+
 // ===== DOM ELEMENT CACHE =====
 const elements = {
     // Inputs - Basic Info
     salary: document.getElementById('salary'),
+    salarySlider: document.getElementById('salarySlider'),
+    salaryValue: document.getElementById('salaryValue'),
     nonTaxable: document.getElementById('nonTaxable'),
 
     // Inputs - Insurance
@@ -126,9 +162,40 @@ const manuallyEditedFields = new Set();
 // Debounce timer
 let saveDebounceTimer = null;
 
+// Hero social proof counter
+let calculationCount = localStorage.getItem('taxCalcCount') ? parseInt(localStorage.getItem('taxCalcCount')) : 0;
+
+// ===== SALARY SLIDER SETUP =====
+function setupSalarySlider() {
+    if (!elements.salarySlider || !elements.salary || !elements.salaryValue) return;
+
+    // Slider to input
+    elements.salarySlider.addEventListener('input', (e) => {
+        const value = parseInt(e.target.value);
+        elements.salary.value = formatMoney(value);
+        elements.salaryValue.textContent = formatMoney(value);
+        autoCalculateInsurance(value);
+        debouncedSave();
+    });
+
+    // Input to slider
+    elements.salary.addEventListener('input', (e) => {
+        const raw = parseMoney(e.target.value);
+        e.target.value = formatMoney(raw);
+        elements.salarySlider.value = raw;
+        if (elements.salaryValue) {
+            elements.salaryValue.textContent = formatMoney(raw);
+        }
+        autoCalculateInsurance(raw);
+        debouncedSave();
+    });
+}
+
 // ===== MONEY INPUT FORMATTING =====
 function setupMoneyInputs() {
     document.querySelectorAll('.input-money').forEach(input => {
+        if (input.id === 'salary') return; // Skip salary, handled by slider
+
         input.addEventListener('input', (e) => {
             const raw = parseMoney(e.target.value);
             e.target.value = formatMoney(raw);
@@ -136,11 +203,6 @@ function setupMoneyInputs() {
             // Track manual edits for auto-calc fields
             if (e.target.classList.contains('auto-field')) {
                 manuallyEditedFields.add(e.target.id);
-            }
-
-            // Auto-calculate insurance when salary changes
-            if (e.target.id === 'salary') {
-                autoCalculateInsurance(raw);
             }
 
             debouncedSave();
@@ -330,6 +392,11 @@ function handleCalculate() {
     // Display results
     displayResults(result, data);
 
+    // Update calculation counter
+    calculationCount++;
+    localStorage.setItem('taxCalcCount', calculationCount);
+    updateHeroProof();
+
     // What-If 시나리오
     displayWhatIf(result, data, taxableSalary);
 
@@ -355,7 +422,8 @@ function displayResults(result, data) {
     elements.resultStatus.innerHTML = statusText;
     elements.resultStatus.style.color = statusColor;
 
-    elements.refundAmount.textContent = formatMoney(Math.abs(totalRefund)) + '원';
+    // Animate number count-up
+    animateCountUp(elements.refundAmount, Math.abs(totalRefund), 1000);
     elements.refundAmount.style.color = statusColor;
 
     elements.refundSub.textContent = `(지방소득세 ${formatMoney(localTax)}원 포함 총 ${isRefund ? '환급' : '납부'})`;
@@ -768,8 +836,12 @@ function initApp() {
     // Load saved data first
     loadFormData();
 
+    // Update hero proof counter
+    updateHeroProof();
+
     // Setup UI components
     setupLanguageSelector();
+    setupSalarySlider();
     setupMoneyInputs();
     setupAccordion();
     setupToggleButtons();
