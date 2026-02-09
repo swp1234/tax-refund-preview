@@ -1,12 +1,12 @@
 // Service Worker for Tax Refund Preview App
 const CACHE_NAME = 'tax-refund-v1';
 const urlsToCache = [
-    '.',
-    './index.html',
-    './css/style.css',
-    './js/app.js',
-    './js/tax-data.js',
-    './manifest.json',
+    '/',
+    '/index.html',
+    '/css/style.css',
+    '/js/app.js',
+    '/js/tax-data.js',
+    '/manifest.json',
 ];
 
 // 설치 이벤트
