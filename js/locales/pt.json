@@ -4,46 +4,139 @@
     "description": "Simulação de estimativa de devolução de impostos de 2026. Calcule a devolução estimada instantaneamente inserindo salário e deduções. Cálculo automático de 7 itens de dedução com dicas de economia de impostos."
   },
   "header": {
-    "title": "Visualização de Devolução de Impostos",
-    "subtitle": "Verifique Devolução Estimada Instantaneamente",
-    "help": "Ajuda"
+    "mainTitle": "연말정산 미리보기",
+    "subtitle": "Verifique Devolução Estimada Instantaneamente"
+  },
+  "common": {
+    "adArea": "광고 영역"
+  },
+  "languages": {
+    "ko": "🇰🇷 한국어",
+    "en": "🇺🇸 English",
+    "ja": "🇯🇵 日本語",
+    "es": "🇪🇸 Español",
+    "pt": "🇧🇷 Português",
+    "zh": "🇨🇳 中文",
+    "id": "🇮🇩 Indonesia",
+    "tr": "🇹🇷 Türkçe",
+    "de": "🇩🇪 Deutsch",
+    "fr": "🇫🇷 Français",
+    "hi": "🇮🇳 हिन्दी",
+    "ru": "🇷🇺 Русский"
+  },
+  "summary": {
+    "expectedRefund": "예상 환급액"
+  },
+  "sections": {
+    "basic": {
+      "title": "기본 정보",
+      "defaultSummary": "급여와 부양가족 정보를 입력하세요"
+    },
+    "insurance": {
+      "title": "4대보험료",
+      "defaultSummary": "급여 기준 자동 계산됩니다"
+    },
+    "incomeDeduction": {
+      "title": "소득공제",
+      "defaultSummary": "카드 사용액, 주택 관련 공제"
+    },
+    "taxCredit": {
+      "title": "세액공제",
+      "defaultSummary": "의료비, 교육비, 연금저축 등"
+    }
   },
   "form": {
     "salary": "Renda Total",
     "salaryHelper": "Renda de trabalho combinada e outras rendas",
-    "medical": "Despesas Médicas",
-    "education": "Despesas de Educação",
-    "donations": "Doações",
-    "creditCard": "Uso de Cartão de Crédito",
-    "housing": "Juros de Hipoteca",
-    "pension": "Seguro de Pensão",
-    "currency": "₩",
+    "nonTaxable": "비과세소득 (연간)",
+    "nonTaxableHelper": "식대 월 20만원(연 240만) 등. 모르면 기본값 그대로 두세요.",
+    "spouse": "배우자",
+    "yes": "있음",
+    "no": "없음",
+    "children": "20세 이하 자녀",
+    "parents": "70세 이상 부모",
+    "otherDependents": "기타 부양가족",
+    "people": "명",
+    "required": "필수",
+    "optional": "선택",
+    "won": "원",
+    "auto": "자동",
     "calculate": "Calcular",
     "reset": "Redefinir"
   },
+  "insurance": {
+    "autoCalcNotice": "급여를 입력하면 자동 계산됩니다. 실제 납부액과 다르면 직접 수정하세요.",
+    "nationalPension": "국민연금",
+    "nationalPensionHelper": "근로자 부담분 4.5%",
+    "healthInsurance": "건강보험",
+    "healthInsuranceHelper": "근로자 부담분 3.545%",
+    "longTermCare": "장기요양보험",
+    "longTermCareHelper": "건강보험의 12.95%",
+    "employmentInsurance": "고용보험",
+    "employmentInsuranceHelper": "근로자 부담분 0.9%"
+  },
+  "deductions": {
+    "cardUsageTitle": "카드/현금 사용액 (연간 합계)",
+    "cardUsageDesc": "총급여의 25% 초과분부터 공제 적용 (신용카드 15%, 체크카드/현금 30%, 전통시장/대중교통 40%)",
+    "creditCard": "신용카드",
+    "debitCard": "체크카드/현금영수증",
+    "tradMarket": "전통시장",
+    "publicTransport": "대중교통",
+    "housingTitle": "주택 관련",
+    "housingSaving": "주택청약저축",
+    "housingSavingHelper": "연 납입액 (한도 240만원, 40%)",
+    "housingLoan": "주택담보대출 이자",
+    "housingLoanHelper": "연 이자 상환액"
+  },
+  "taxCredits": {
+    "medical": "의료비 (본인+가족)",
+    "medicalHelper": "총급여 3% 초과분의 15% 공제",
+    "education": "교육비",
+    "educationHelper": "본인 전액, 자녀 초중고 300만/대학 900만 한도",
+    "donations": "기부금",
+    "donationsHelper": "15% (1,000만 초과분 30%)",
+    "insurance": "보장성보험료",
+    "insuranceHelper": "연 100만원 한도, 12% 공제",
+    "pensionSaving": "연금저축",
+    "pensionSavingHelper": "한도 600만원 (12~15%)",
+    "irp": "IRP (퇴직연금)",
+    "irpHelper": "연금저축+IRP 합산 900만원 한도",
+    "monthlyRent": "월세 (연간 합계)",
+    "monthlyRentHelper": "총급여 7,000만 이하, 연 1,000만원 한도 (15~17%)"
+  },
+  "buttons": {
+    "calculate": "계산하기",
+    "reset": "초기화",
+    "close": "닫기"
+  },
   "results": {
     "title": "Resultados do Cálculo",
-    "refundAmount": "Devolução Estimada",
-    "breakdown": "Detalhamento de Deduções",
-    "totalDeductions": "Total de Deduções",
-    "taxableIncome": "Renda Tributável",
-    "premium": "Ver Dicas de Economia de Impostos com IA"
+    "breakdown": "Detalhamento de Deduções"
   },
   "premium": {
     "title": "Dicas de Economia de Impostos com IA",
     "watchAd": "Assistir um anúncio para ver dicas",
-    "close": "Fechar"
+    "showTips": "절세 전략 팁 보기"
+  },
+  "whatif": {
+    "title": "💡 이렇게 하면 얼마나 더 받을까?"
+  },
+  "recommendations": {
+    "title": "이것도 해보세요"
   },
   "help": {
     "title": "Como Usar",
-    "step1Title": "1. Insira Informações de Renda",
-    "step1Desc": "Insira sua renda total (renda do trabalho + outras rendas combinadas).",
-    "step2Title": "2. Insira Deduções",
-    "step2Desc": "Insira suas despesas médicas, educação, doações, etc.",
-    "step3Title": "3. Calcular",
-    "step3Desc": "Clique em \"Calcular\" para ver sua devolução estimada.",
-    "warningTitle": "Notas Importantes",
-    "warning": "• Este cálculo é apenas para referência. Confirme resultados exatos com a autoridade fiscal.\n• Casas decimais são arredondadas.\n• Não inclui impostos locais, impostos especiais, etc."
+    "whatIsThis": "📌 이 계산기는?",
+    "whatIsThisDesc": "2025년 귀속(2026년 신고) 연말정산 환급액을 미리 계산해볼 수 있는 시뮬레이터입니다.",
+    "howToUse": "📝 입력 방법",
+    "howToUseDesc": "• <strong>기본 정보:</strong> 세전 연봉과 부양가족 수를 입력합니다<br>• <strong>4대보험:</strong> 급여 기준 자동 계산됩니다 (실제와 다르면 수정 가능)<br>• <strong>소득공제:</strong> 신용카드, 체크카드, 주택 관련 지출을 입력합니다<br>• <strong>세액공제:</strong> 의료비, 교육비, 연금저축 등을 입력합니다",
+    "calculationProcess": "🔢 계산 과정",
+    "calculationProcessDesc": "총급여 → 근로소득공제 → 소득공제 → 과세표준 → 산출세액 → 세액공제 → 결정세액 → 원천징수 비교 → 환급/추가납부",
+    "caution": "⚠️ 주의사항",
+    "cautionDesc": "• 본 계산은 <strong>참고용</strong>이며 실제 결과와 차이가 있을 수 있습니다<br>• 정확한 결과는 국세청 <strong>연말정산 간소화 서비스</strong>를 이용하세요<br>• 지방소득세(소득세의 10%)는 별도 표시됩니다<br>• 특수 공제(장애인, 한부모 등)는 포함되지 않습니다"
   },
-  "recommendations": "Experimente também"
+  "footer": {
+    "disclaimer": "본 계산은 참고용이며, 정확한 결과는 국세청 연말정산 간소화 서비스를 이용하세요.",
+    "copyright": "© 2026 DopaBrain"
+  }
 }
