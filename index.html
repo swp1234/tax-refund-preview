@@ -533,9 +533,13 @@
     <!-- i18n Initialization -->
     <script>
     (async function initI18n() {
-        if (typeof i18n !== 'undefined') {
-            await i18n.loadTranslations(i18n.getCurrentLanguage());
-            i18n.updateUI();
+        try {
+            if (typeof i18n !== 'undefined') {
+                await i18n.loadTranslations(i18n.getCurrentLanguage());
+                i18n.updateUI();
+            }
+        } catch (e) {
+            console.warn('i18n init failed:', e);
         }
     })();
     </script>

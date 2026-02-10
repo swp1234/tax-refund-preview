@@ -1,5 +1,5 @@
 // Service Worker for Tax Refund Preview App
-const CACHE_NAME = 'tax-refund-v1';
+const CACHE_NAME = 'tax-refund-v2';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -39,7 +39,7 @@ self.addEventListener('activate', event => {
     self.clients.claim();
 });
 
-// 페치 이벤트
+// 페치 이벤트 - Network-first strategy
 self.addEventListener('fetch', event => {
     // Skip non-GET requests
     if (event.request.method !== 'GET') {
@@ -47,31 +47,24 @@ self.addEventListener('fetch', event => {
     }
 
     event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                // 캐시에서 찾으면 반환
-                if (response) {
-                    return response;
-                }
+        fetch(event.request).then(response => {
+            // 네트워크 요청 성공하면 캐시에 저장
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+                return response;
+            }
 
-                return fetch(event.request).then(response => {
-                    // 네트워크 요청 성공하면 캐시에 저장
-                    if (!response || response.status !== 200 || response.type !== 'basic') {
-                        return response;
-                    }
-
-                    const responseToCache = response.clone();
-                    caches.open(CACHE_NAME)
-                        .then(cache => {
-                            cache.put(event.request, responseToCache);
-                        });
-
-                    return response;
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+                .then(cache => {
+                    cache.put(event.request, responseToCache);
                 });
-            })
-            .catch(() => {
-                // 오프라인 상태에서는 캐시된 index.html 반환
-                return caches.match('./index.html');
-            })
+
+            return response;
+        }).catch(() => {
+            // 네트워크 실패 시 캐시에서 반환
+            return caches.match(event.request).then(response => {
+                return response || caches.match('./index.html');
+            });
+        })
     );
 });
