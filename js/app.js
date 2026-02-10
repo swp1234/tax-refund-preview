@@ -372,22 +372,36 @@ function handleCalculate() {
         return;
     }
 
-    // Calculate actual salary (after non-taxable)
-    const taxableSalary = Math.max(0, data.salary - data.nonTaxable);
-
-    // Create deductions object for calculation
-    const deductions = {
-        ...data.deductions,
+    // Build flat input object for calculateTax() (tax-data.js expects single flat object)
+    const taxInput = {
+        salary: data.salary,
+        nonTaxable: data.nonTaxable,
+        spouse: data.hasSpouse,
+        children: data.children,
+        parents: data.parents,
+        otherDep: data.otherDep,
+        nationalPension: data.insurance.nationalPension,
+        healthInsurance: data.insurance.healthInsurance,
+        longTermCare: data.insurance.longTermCare,
+        employmentInsurance: data.insurance.employmentInsurance,
         creditCard: data.deductions.creditCard,
+        debitCard: data.deductions.debitCard,
+        tradMarket: data.deductions.tradMarket,
+        publicTransport: data.deductions.publicTransport,
+        housingSaving: data.deductions.housingSaving,
+        housingLoan: data.deductions.housingLoan,
         medical: data.deductions.medical,
         education: data.deductions.education,
         donations: data.deductions.donations,
-        housing: data.deductions.housingLoan,
-        pension: data.deductions.pensionSaving,
+        insurance: data.deductions.insurance,
+        pensionSaving: data.deductions.pensionSaving,
+        irp: data.deductions.irp,
+        monthlyRent: data.deductions.monthlyRent,
     };
 
     // Calculate tax using tax-data.js function
-    const result = calculateTax(taxableSalary, deductions);
+    const result = calculateTax(taxInput);
+    const taxableSalary = Math.max(0, data.salary - data.nonTaxable);
 
     // Display results
     displayResults(result, data);
