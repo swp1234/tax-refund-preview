@@ -4,7 +4,11 @@
     "description": "2026年税务退款估计模拟。输入工资和扣除额即可立即计算预计退款。7项扣除自动计算，提供税款节省提示。"
   },
   "header": {
-    "mainTitle": "연말정산 미리보기",
+    "badge": "2026年税务退款",
+    "heroCta": "我的退款是多少?",
+    "heroProof": "人计算过",
+    "heroTime": "仅需1分钟精确计算",
+    "mainTitle": "税务退款预览",
     "subtitle": "立即查看预计退款"
   },
   "common": {

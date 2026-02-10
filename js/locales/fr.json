@@ -4,7 +4,11 @@
     "description": "Simulation d'estimation du remboursement d'impôts 2026. Calcule le remboursement estimé instantanément en entrant le salaire et les déductions. Calcul automatique de 7 postes de déduction avec conseils d'économies d'impôts."
   },
   "header": {
-    "mainTitle": "연말정산 미리보기",
+    "badge": "2026 Remboursement d'Impôts",
+    "heroCta": "Quel est mon remboursement?",
+    "heroProof": "personnes ont calculé",
+    "heroTime": "Calculez avec précision en seulement 1 minute",
+    "mainTitle": "Aperçu du Remboursement d'Impôts",
     "subtitle": "Vérifier le Remboursement Estimé Instantanément"
   },
   "common": {

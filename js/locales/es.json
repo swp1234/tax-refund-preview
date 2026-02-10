@@ -4,7 +4,11 @@
     "description": "Simulación de estimación de reembolso de impuestos 2026. Calcula el reembolso estimado instantáneamente ingresando salario y deducciones. Cálculo automático de 7 elementos de deducción con consejos de ahorro fiscal."
   },
   "header": {
-    "mainTitle": "연말정산 미리보기",
+    "badge": "2026 Devolución de Impuestos",
+    "heroCta": "¿Cuál es mi reembolso?",
+    "heroProof": "personas calcularon",
+    "heroTime": "Calcula con precisión en solo 1 minuto",
+    "mainTitle": "Vista Previa de Devolución de Impuestos",
     "subtitle": "Verifica el Reembolso Estimado al Instante"
   },
   "common": {

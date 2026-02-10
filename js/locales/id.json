@@ -4,7 +4,11 @@
     "description": "Simulasi perkiraan pengembalian pajak 2026. Hitung pengembalian perkiraan secara instan dengan memasukkan gaji dan potongan. Perhitungan otomatis dari 7 item potongan dengan tips penghematan pajak."
   },
   "header": {
-    "mainTitle": "연말정산 미리보기",
+    "badge": "2026 Pengembalian Pajak",
+    "heroCta": "Berapa pengembalian saya?",
+    "heroProof": "orang menghitung",
+    "heroTime": "Hitung dengan akurat hanya dalam 1 menit",
+    "mainTitle": "Pratinjau Pengembalian Pajak",
     "subtitle": "Periksa Pengembalian Perkiraan Secara Instan"
   },
   "common": {

@@ -4,7 +4,11 @@
     "description": "2026 Steuererstattungsschätzungs-Simulation. Berechne geschätzte Rückerstattung sofort durch Eingabe von Gehalt und Abzügen. Automatische Berechnung von 7 Abzugspositionen mit Steuerersparnistipps."
   },
   "header": {
-    "mainTitle": "연말정산 미리보기",
+    "badge": "2026 Steuererstattung",
+    "heroCta": "Wie hoch ist meine Rückerstattung?",
+    "heroProof": "Leute haben berechnet",
+    "heroTime": "Berechne genau in nur 1 Minute",
+    "mainTitle": "Steuererstattung Vorschau",
     "subtitle": "Überprüfe geschätzte Rückerstattung sofort"
   },
   "common": {

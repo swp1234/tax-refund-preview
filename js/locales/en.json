@@ -48,7 +48,11 @@
     "yes": ""
   },
   "header": {
-    "mainTitle": "",
+    "badge": "2026 Tax Refund",
+    "heroCta": "How much is my refund?",
+    "heroProof": "people calculated",
+    "heroTime": "Calculate accurately in just 1 minute",
+    "mainTitle": "Tax Refund Preview",
     "subtitle": "Check Estimated Refund Instantly"
   },
   "help": {

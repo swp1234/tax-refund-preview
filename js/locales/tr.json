@@ -4,7 +4,11 @@
     "description": "2026 vergi iadesi tahmini simülasyonu. Maaş ve kesintileri girerek tahmini iadenizi anında hesapla. 7 kesinti öğesinin otomatik hesaplaması ve vergi tasarrufu ipuçları."
   },
   "header": {
-    "mainTitle": "연말정산 미리보기",
+    "badge": "2026 Vergi İadesi",
+    "heroCta": "İadem ne kadar?",
+    "heroProof": "kişi hesapladı",
+    "heroTime": "Sadece 1 dakikada doğru hesapla",
+    "mainTitle": "Vergi İadesi Önizlemesi",
     "subtitle": "Tahmini İadeyi Anında Kontrol Et"
   },
   "common": {
