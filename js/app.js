@@ -873,6 +873,13 @@ function initApp() {
 
     // Register service worker
     registerServiceWorker();
+
+    // Hide app loader
+    const loader = document.getElementById('app-loader');
+    if (loader) {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 300);
+    }
 }
 
 // Start app when DOM is ready
