@@ -1,3 +1,23 @@
+// ===== THEME TOGGLE SETUP =====
+function setupThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return;
+
+    // Load saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+
+    // Toggle theme on click
+    themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
+    });
+}
+
 // ===== LANGUAGE SETUP =====
 function setupLanguageSelector() {
     const langToggle = document.getElementById('lang-toggle');
@@ -854,6 +874,7 @@ function initApp() {
     updateHeroProof();
 
     // Setup UI components
+    setupThemeToggle();
     setupLanguageSelector();
     setupSalarySlider();
     setupMoneyInputs();
