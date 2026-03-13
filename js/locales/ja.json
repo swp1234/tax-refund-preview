@@ -142,5 +142,12 @@
   "footer": {
     "disclaimer": "본 계산은 참고용이며, 정확한 결과는 국세청 연말정산 간소화 서비스를 이용하세요.",
     "copyright": "© 2026 DopaBrain"
+  },
+  "related": {
+    "title": "もっと楽しむ",
+    "sebatdonCalc": "お年玉計算機",
+    "shoppingCalc": "ショッピング計算機",
+    "unitConverter": "単位変換",
+    "lifeInNumbers": "数字で見る人生"
   }
 }

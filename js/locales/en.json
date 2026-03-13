@@ -142,5 +142,12 @@
   },
   "whatif": {
     "title": ""
+  },
+  "related": {
+    "title": "More to Explore",
+    "sebatdonCalc": "Sebatdon Calc",
+    "shoppingCalc": "Shopping Calc",
+    "unitConverter": "Unit Converter",
+    "lifeInNumbers": "Life in Numbers"
   }
 }

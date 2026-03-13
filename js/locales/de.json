@@ -142,5 +142,12 @@
   "footer": {
     "disclaimer": "본 계산은 참고용이며, 정확한 결과는 국세청 연말정산 간소화 서비스를 이용하세요.",
     "copyright": "© 2026 DopaBrain"
+  },
+  "related": {
+    "title": "Mehr entdecken",
+    "sebatdonCalc": "Sebatdon-Rechner",
+    "shoppingCalc": "Einkaufsrechner",
+    "unitConverter": "Einheitenumrechner",
+    "lifeInNumbers": "Leben in Zahlen"
   }
 }
