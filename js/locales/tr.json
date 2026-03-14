@@ -149,5 +149,24 @@
     "shoppingCalc": "Alışveriş Hesaplayıcı",
     "unitConverter": "Birim Dönüştürücü",
     "lifeInNumbers": "Sayılarla Hayat"
+  },
+  "about": {
+    "title": "Vergi İadesi Hesaplayıcısı Hakkında",
+    "desc": "DopaBrain Vergi İadesi Hesaplayıcısı vergi iadenizi 1 dakikada tahmin eder. Tamamen ücretsiz.",
+    "howTitle": "Vergi İadenizi Nasıl Hesaplayabilirsiniz",
+    "howDesc": "Temel bilgileri (maaş, bakmakla yükümlü) girin, sigorta otomatik hesaplanır."
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "q1": "Bu hesaplayıcı doğru mu?",
+    "a1": "Bu hesaplayıcı vergi yasalarına göre tahmin sağlar. Sadece referans içindir.",
+    "q2": "Hangi kesintileri destekliyor?",
+    "a2": "Sosyal sigorta, kart harcamaları, tıbbi, eğitim dahil 19 giriş alanını destekler.",
+    "q3": "Kişisel verilerim güvende mi?",
+    "a3": "Tüm hesaplamalar tarayıcınızda gerçekleşir. Hiçbir veri sunucuya gönderilmez.",
+    "q4": "Sosyal sigorta nasıl hesaplanır?",
+    "a4": "Maaşınızı girdiğinizde sosyal sigorta otomatik hesaplanır.",
+    "q5": "Sonuçlarımı paylaşabilir miyim?",
+    "a5": "Evet, sosyal medya üzerinden paylaşabilir veya bağlantıyı kopyalayabilirsiniz."
   }
 }

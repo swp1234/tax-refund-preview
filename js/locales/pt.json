@@ -149,5 +149,24 @@
     "shoppingCalc": "Calculadora de compras",
     "unitConverter": "Conversor de unidades",
     "lifeInNumbers": "A vida em números"
+  },
+  "about": {
+    "title": "Sobre a Calculadora de Reembolso Fiscal",
+    "desc": "A Calculadora de Reembolso Fiscal DopaBrain estima seu reembolso em 1 minuto. Totalmente grátis.",
+    "howTitle": "Como calcular seu reembolso fiscal",
+    "howDesc": "Insira suas informações básicas (salário, dependentes) e o seguro é calculado automaticamente."
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "q1": "Esta calculadora é precisa?",
+    "a1": "Esta calculadora fornece estimativas baseadas em leis fiscais. Apenas para referência.",
+    "q2": "Quais deduções são suportadas?",
+    "a2": "Suporta 19 campos incluindo seguro social, gastos com cartão, médico, educação e mais.",
+    "q3": "Meus dados pessoais estão seguros?",
+    "a3": "Todos os cálculos acontecem no seu navegador. Nenhum dado é enviado a qualquer servidor.",
+    "q4": "Como o seguro social é calculado?",
+    "a4": "Ao inserir seu salário, o seguro social é calculado automaticamente.",
+    "q5": "Posso compartilhar meus resultados?",
+    "a5": "Sim, você pode compartilhar pelas redes sociais ou copiar o link. Dados pessoais não são incluídos."
   }
 }

@@ -149,5 +149,24 @@
     "shoppingCalc": "Shopping Calc",
     "unitConverter": "Unit Converter",
     "lifeInNumbers": "Life in Numbers"
+  },
+  "about": {
+    "title": "About Tax Refund Calculator",
+    "desc": "DopaBrain Tax Refund Calculator estimates your year-end tax refund in just 1 minute. Enter salary, insurance, card spending, medical, education, and pension data across 19 input fields to get your estimated refund with tax-saving tips. Completely free.",
+    "howTitle": "How to Calculate Your Tax Refund",
+    "howDesc": "Enter your basic info (salary, dependents) and insurance is auto-calculated. Add card spending, medical, education, and pension data to see your estimated refund with personalized tax-saving tips."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Is this calculator accurate?",
+    "a1": "This calculator provides estimates based on tax laws. For exact results, please use your country's official tax service. Results are for reference purposes only.",
+    "q2": "What deductions does it support?",
+    "a2": "It supports 19 input fields including social insurance (auto-calculated), credit/debit card spending, traditional market, public transport, housing savings, mortgage interest, medical, education, donations, insurance premiums, pension savings, IRP, and monthly rent.",
+    "q3": "Is my personal data safe?",
+    "a3": "All calculations happen in your browser. No personal data is sent to any server. Your information stays completely on your device.",
+    "q4": "How is social insurance calculated?",
+    "a4": "When you enter your salary, national pension (4.5%), health insurance (3.545%), long-term care, and employment insurance (0.9%) are auto-calculated. You can manually adjust if actual amounts differ.",
+    "q5": "Can I share my results?",
+    "a5": "Yes, you can share your results via social media or copy the link. No personal data is included in shared results, so your privacy is protected."
   }
 }

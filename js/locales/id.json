@@ -149,5 +149,24 @@
     "shoppingCalc": "Kalkulator Belanja",
     "unitConverter": "Konverter Satuan",
     "lifeInNumbers": "Hidup dalam Angka"
+  },
+  "about": {
+    "title": "Tentang Kalkulator Pengembalian Pajak",
+    "desc": "Kalkulator Pengembalian Pajak DopaBrain memperkirakan pengembalian pajak Anda dalam 1 menit. Sepenuhnya gratis.",
+    "howTitle": "Cara Menghitung Pengembalian Pajak",
+    "howDesc": "Masukkan info dasar (gaji, tanggungan) dan asuransi dihitung otomatis."
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "q1": "Apakah kalkulator ini akurat?",
+    "a1": "Kalkulator ini memberikan perkiraan berdasarkan hukum pajak. Hanya untuk referensi.",
+    "q2": "Potongan apa saja yang didukung?",
+    "a2": "Mendukung 19 bidang input termasuk asuransi sosial, pengeluaran kartu, medis, pendidikan, dan lainnya.",
+    "q3": "Apakah data pribadi saya aman?",
+    "a3": "Semua perhitungan terjadi di browser Anda. Tidak ada data yang dikirim ke server.",
+    "q4": "Bagaimana asuransi sosial dihitung?",
+    "a4": "Saat memasukkan gaji, asuransi sosial dihitung otomatis.",
+    "q5": "Bisakah saya membagikan hasil?",
+    "a5": "Ya, Anda dapat berbagi melalui media sosial atau menyalin tautan. Data pribadi tidak disertakan."
   }
 }

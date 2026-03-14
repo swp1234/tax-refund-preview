@@ -149,5 +149,24 @@
     "shoppingCalc": "Calculateur d'achats",
     "unitConverter": "Convertisseur d'unités",
     "lifeInNumbers": "La vie en chiffres"
+  },
+  "about": {
+    "title": "À propos du Calculateur de Remboursement Fiscal",
+    "desc": "Le Calculateur de Remboursement Fiscal DopaBrain estime votre remboursement en 1 minute. Entièrement gratuit.",
+    "howTitle": "Comment calculer votre remboursement fiscal",
+    "howDesc": "Entrez vos informations de base (salaire, personnes à charge) et l'assurance est calculée automatiquement."
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Ce calculateur est-il précis ?",
+    "a1": "Ce calculateur fournit des estimations basées sur les lois fiscales. À titre de référence uniquement.",
+    "q2": "Quelles déductions sont prises en charge ?",
+    "a2": "Prend en charge 19 champs de saisie, y compris l'assurance sociale, les dépenses par carte, médicales, éducation et plus.",
+    "q3": "Mes données personnelles sont-elles en sécurité ?",
+    "a3": "Tous les calculs se font dans votre navigateur. Aucune donnée n'est envoyée à un serveur.",
+    "q4": "Comment l'assurance sociale est-elle calculée ?",
+    "a4": "Lorsque vous entrez votre salaire, l'assurance sociale est calculée automatiquement.",
+    "q5": "Puis-je partager mes résultats ?",
+    "a5": "Oui, vous pouvez partager via les réseaux sociaux ou copier le lien. Aucune donnée personnelle n'est incluse."
   }
 }

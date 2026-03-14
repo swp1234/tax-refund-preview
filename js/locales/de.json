@@ -149,5 +149,24 @@
     "shoppingCalc": "Einkaufsrechner",
     "unitConverter": "Einheitenumrechner",
     "lifeInNumbers": "Leben in Zahlen"
+  },
+  "about": {
+    "title": "Über den Steuerrückerstattungsrechner",
+    "desc": "Der DopaBrain Steuerrückerstattungsrechner schätzt Ihre Rückerstattung in 1 Minute. Völlig kostenlos.",
+    "howTitle": "So berechnen Sie Ihre Steuerrückerstattung",
+    "howDesc": "Geben Sie Grunddaten (Gehalt, Angehörige) ein, die Versicherung wird automatisch berechnet."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Ist dieser Rechner genau?",
+    "a1": "Dieser Rechner liefert Schätzungen basierend auf Steuergesetzen. Nur zu Referenzzwecken.",
+    "q2": "Welche Abzüge werden unterstützt?",
+    "a2": "Unterstützt 19 Eingabefelder einschließlich Sozialversicherung, Kartenausgaben, Medizin, Bildung und mehr.",
+    "q3": "Sind meine persönlichen Daten sicher?",
+    "a3": "Alle Berechnungen erfolgen in Ihrem Browser. Keine Daten werden an einen Server gesendet.",
+    "q4": "Wie wird die Sozialversicherung berechnet?",
+    "a4": "Bei Eingabe Ihres Gehalts wird die Sozialversicherung automatisch berechnet.",
+    "q5": "Kann ich meine Ergebnisse teilen?",
+    "a5": "Ja, Sie können über soziale Medien teilen oder den Link kopieren. Keine persönlichen Daten enthalten."
   }
 }
