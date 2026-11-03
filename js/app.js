@@ -724,22 +724,10 @@ function handleReset() {
 // ===== PREMIUM MODAL HANDLER =====
 function handlePremiumClick() {
     elements.premiumModal.classList.remove('hidden');
-    elements.premiumAd.classList.remove('hidden');
-    elements.tipsContent.classList.add('hidden');
-
-    // Start countdown
-    let countdown = 5;
-    elements.countdownNumber.textContent = countdown;
-
-    const countdownInterval = setInterval(() => {
-        countdown--;
-        elements.countdownNumber.textContent = countdown;
-
-        if (countdown === 0) {
-            clearInterval(countdownInterval);
-            showTips();
-        }
-    }, 1000);
+    if (typeof gtag === 'function') {
+        gtag('event', 'premium_tips_view', { event_category: 'tax_refund_preview' });
+    }
+    showTips();
 }
 
 function showTips() {
@@ -908,4 +896,35 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initApp);
 } else {
     initApp();
+}
+
+
+// Funnel bridge & language preservation
+function initRelatedFunnels() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || (window.i18n ? window.i18n.getCurrentLanguage() : 'ko') || 'ko';
+    const base = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : 'https://dopabrain.com';
+    document.querySelectorAll('.related-grid a').forEach(link => {
+        const baseHref = link.getAttribute('data-base-href') || link.getAttribute('href');
+        if (!baseHref || baseHref.startsWith('http') || baseHref.startsWith('#')) return;
+        try {
+            const url = new URL(baseHref, base);
+            url.searchParams.set('lang', lang);
+            if (!url.searchParams.has('source')) url.searchParams.set('source', 'tax_refund_preview_result');
+            link.setAttribute('href', url.pathname + url.search);
+        } catch(e) {}
+        if (!link.dataset.trackedCta) {
+            link.dataset.trackedCta = 'true';
+            link.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'content_cta_click', {
+                        cta_surface: 'tax_refund_preview_related',
+                        destination: link.getAttribute('href'),
+                        source: 'tax_refund_preview',
+                        lang: lang
+                    });
+                }
+            });
+        }
+    });
 }
