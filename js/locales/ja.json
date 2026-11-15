@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "税務還付プレビュー - 計算機 | DopaBrain",
-    "description": "2026年税務還付推定シミュレーション。給与と控除を入力して即座に推定還付額を計算。7つの控除項目を自動計算し、節税のコツを提供。"
+    "description": "2026年税務還付推定シミュレーション。給与と控除を入力して即座に推定還付額を計算。7つの控除項目を自動計算し、節税のコツを提供。",
+    "loading": "読み込み中..."
   },
   "header": {
     "badge": "2026年税務還付",
@@ -188,5 +189,8 @@
     "book2Title": "お金か人生か（Your Money or Your Life）",
     "book2Author": "Vicki Robin",
     "book2Desc": "労働時間・支出・貯蓄のバランスを見直し経済的自立へ導く名著。"
+  },
+  "accessibility": {
+    "skipToMain": "メインコンテンツへ移動"
   }
 }

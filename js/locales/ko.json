@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "연말정산 미리보기 - 환급액 계산기 | DopaBrain",
-    "description": "2026 연말정산 예상 환급액 시뮬레이션. 급여, 공제액 입력으로 즉시 환급액 계산. 7개 공제항목 자동 계산, 환급액 최대화 팁 제공."
+    "description": "2026 연말정산 예상 환급액 시뮬레이션. 급여, 공제액 입력으로 즉시 환급액 계산. 7개 공제항목 자동 계산, 환급액 최대화 팁 제공.",
+    "loading": "로딩 중..."
   },
   "header": {
     "badge": "2026 연말정산",
@@ -188,5 +189,8 @@
     "book2Title": "돈 또는 인생 (Your Money or Your Life)",
     "book2Author": "Vicki Robin",
     "book2Desc": "소비·시간·세후 소득의 관계를 재정립해 재정 자립을 이끄는 고전 명저"
+  },
+  "accessibility": {
+    "skipToMain": "본문으로 건너뛰기"
   }
 }

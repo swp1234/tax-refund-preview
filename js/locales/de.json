@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Steuererstattung Vorschau - Rechner | DopaBrain",
-    "description": "2026 Steuererstattungsschätzungs-Simulation. Berechne geschätzte Rückerstattung sofort durch Eingabe von Gehalt und Abzügen. Automatische Berechnung von 7 Abzugspositionen mit Steuerersparnistipps."
+    "description": "2026 Steuererstattungsschätzungs-Simulation. Berechne geschätzte Rückerstattung sofort durch Eingabe von Gehalt und Abzügen. Automatische Berechnung von 7 Abzugspositionen mit Steuerersparnistipps.",
+    "loading": "Wird geladen..."
   },
   "header": {
     "badge": "2026 Steuererstattung",
@@ -188,5 +189,8 @@
     "book2Title": "Dein Geld oder dein Leben",
     "book2Author": "Vicki Robin",
     "book2Desc": "Der Klassiker zur Neuausrichtung von Nettoeinkommen, Konsum und Lebenszeit."
+  },
+  "accessibility": {
+    "skipToMain": "Zum Hauptinhalt springen"
   }
 }

@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Aperçu du Remboursement d'Impôts - Calculatrice | DopaBrain",
-    "description": "Simulation d'estimation du remboursement d'impôts 2026. Calcule le remboursement estimé instantanément en entrant le salaire et les déductions. Calcul automatique de 7 postes de déduction avec conseils d'économies d'impôts."
+    "description": "Simulation d'estimation du remboursement d'impôts 2026. Calcule le remboursement estimé instantanément en entrant le salaire et les déductions. Calcul automatique de 7 postes de déduction avec conseils d'économies d'impôts.",
+    "loading": "Chargement..."
   },
   "header": {
     "badge": "2026 Remboursement d'Impôts",
@@ -188,5 +189,8 @@
     "book2Title": "La Bourse ou la Vie",
     "book2Author": "Vicki Robin",
     "book2Desc": "Ouvrage de référence pour harmoniser revenu net, dépenses et liberté."
+  },
+  "accessibility": {
+    "skipToMain": "Aller au contenu principal"
   }
 }

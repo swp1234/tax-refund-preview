@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "税务退款预览 - 计算器 | DopaBrain",
-    "description": "2026年税务退款估计模拟。输入工资和扣除额即可立即计算预计退款。7项扣除自动计算，提供税款节省提示。"
+    "description": "2026年税务退款估计模拟。输入工资和扣除额即可立即计算预计退款。7项扣除自动计算，提供税款节省提示。",
+    "loading": "加载中..."
   },
   "header": {
     "badge": "2026年税务退款",
@@ -188,5 +189,8 @@
     "book2Title": "要钱还是要生活（Your Money or Your Life）",
     "book2Author": "Vicki Robin",
     "book2Desc": "重新审视税后收入、时间价值与消费习惯的经典个人理财作品。"
+  },
+  "accessibility": {
+    "skipToMain": "跳转到主要内容"
   }
 }

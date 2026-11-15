@@ -1,7 +1,8 @@
 {
   "app": {
     "description": "2026 tax refund estimate simulation. Calculate estimated refund instantly by entering salary and deductions. Automatic calculation of 7 deduction items with tax savings tips.",
-    "title": "Tax Refund Preview - Calculator | DopaBrain"
+    "title": "Tax Refund Preview - Calculator | DopaBrain",
+    "loading": "Loading..."
   },
   "buttons": {
     "calculate": "Calculate",
@@ -9,43 +10,43 @@
     "reset": "Reset"
   },
   "common": {
-    "adArea": ""
+    "adArea": "Ad space"
   },
   "deductions": {
-    "cardUsageDesc": "",
-    "cardUsageTitle": "",
-    "creditCard": "",
-    "debitCard": "",
-    "housingLoan": "",
-    "housingLoanHelper": "",
-    "housingSaving": "",
-    "housingSavingHelper": "",
-    "housingTitle": "",
-    "publicTransport": "",
-    "tradMarket": ""
+    "cardUsageTitle": "Annual Card & Cash Spending",
+    "cardUsageDesc": "Deductible above 25% of gross pay (Credit card 15%, Debit/Cash 30%, Market/Transit 40%)",
+    "creditCard": "Credit Card",
+    "debitCard": "Debit Card / Cash Receipt",
+    "tradMarket": "Traditional Market",
+    "publicTransport": "Public Transit",
+    "housingTitle": "Housing Deductions",
+    "housingSaving": "Housing Subscription Savings",
+    "housingSavingHelper": "Annual deposit (Limit 2.4M KRW, 40%)",
+    "housingLoan": "Mortgage Interest",
+    "housingLoanHelper": "Annual interest paid"
   },
   "footer": {
-    "copyright": "",
-    "disclaimer": ""
+    "disclaimer": "This estimate is for reference only; verify exact amounts with official tax filing services.",
+    "copyright": "© 2026 DopaBrain"
   },
   "form": {
-    "auto": "",
+    "auto": "Auto",
     "calculate": "Calculate",
-    "children": "",
-    "no": "",
-    "nonTaxable": "",
-    "nonTaxableHelper": "",
-    "optional": "",
-    "otherDependents": "",
-    "parents": "",
-    "people": "",
-    "required": "",
+    "children": "Children (Age 20 or under)",
+    "no": "No",
+    "nonTaxable": "Non-taxable Income (Annual)",
+    "nonTaxableHelper": "e.g., 200K KRW/mo meal allowance (2.4M/yr). Leave default if unsure.",
+    "optional": "Optional",
+    "otherDependents": "Other Dependents",
+    "parents": "Parents (Age 70+)",
+    "people": "ppl",
+    "required": "Required",
     "reset": "Reset",
     "salary": "Total Income",
     "salaryHelper": "Combined earned income and other income",
-    "spouse": "",
-    "won": "",
-    "yes": "",
+    "spouse": "Spouse",
+    "won": "KRW",
+    "yes": "Yes",
     "enterSalary": "Please enter your annual salary."
   },
   "header": {
@@ -57,47 +58,47 @@
     "subtitle": "Check Estimated Refund Instantly"
   },
   "help": {
-    "calculationProcess": "",
-    "calculationProcessDesc": "",
-    "caution": "",
-    "cautionDesc": "",
-    "howToUse": "",
-    "howToUseDesc": "",
+    "calculationProcess": "🔢 Calculation Flow",
+    "calculationProcessDesc": "Gross Pay → Earned Income Deduction → Income Deductions → Tax Base → Calculated Tax → Tax Credits → Determined Tax → vs. Withheld Tax → Refund / Due",
+    "caution": "⚠️ Important Notes",
+    "cautionDesc": "• Results are estimates for reference and may differ from final tax filings<br>• Use the official tax authority portal for certified filing figures<br>• Local income tax (10% of income tax) is displayed separately<br>• Special deductions (disability, single-parent, etc.) are excluded",
+    "howToUse": "📝 How to Enter Data",
+    "howToUseDesc": "• <strong>Basic Info:</strong> Enter pre-tax annual salary and dependents<br>• <strong>Social Insurance:</strong> Auto-calculated from salary (editable)<br>• <strong>Income Deductions:</strong> Enter card spending and housing payments<br>• <strong>Tax Credits:</strong> Enter medical, education, and pension contributions",
     "title": "How to Use",
-    "whatIsThis": "",
-    "whatIsThisDesc": ""
+    "whatIsThis": "📌 About This Calculator",
+    "whatIsThisDesc": "An interactive simulator to preview your 2025-income (2026-filing) year-end tax settlement refund estimate."
   },
   "insurance": {
-    "autoCalcNotice": "",
-    "employmentInsurance": "",
-    "employmentInsuranceHelper": "",
-    "healthInsurance": "",
-    "healthInsuranceHelper": "",
-    "longTermCare": "",
-    "longTermCareHelper": "",
-    "nationalPension": "",
-    "nationalPensionHelper": ""
+    "autoCalcNotice": "Auto-calculated from salary. Adjust directly if your actual withholdings differ.",
+    "nationalPension": "National Pension",
+    "nationalPensionHelper": "Employee contribution 4.5%",
+    "healthInsurance": "Health Insurance",
+    "healthInsuranceHelper": "Employee contribution 3.545%",
+    "longTermCare": "Long-Term Care Insurance",
+    "longTermCareHelper": "12.95% of Health Insurance",
+    "employmentInsurance": "Employment Insurance",
+    "employmentInsuranceHelper": "Employee contribution 0.9%"
   },
   "languages": {
-    "de": "",
-    "en": "",
-    "es": "",
-    "fr": "",
-    "hi": "",
-    "id": "",
-    "ja": "",
-    "ko": "",
-    "pt": "",
-    "ru": "",
-    "tr": "",
-    "zh": ""
+    "de": "🇩🇪 Deutsch",
+    "en": "🇺🇸 English",
+    "es": "🇪🇸 Español",
+    "fr": "🇫🇷 Français",
+    "hi": "🇮🇳 हिन्दी",
+    "id": "🇮🇩 Indonesia",
+    "ja": "🇯🇵 日本語",
+    "ko": "🇰🇷 한국어",
+    "pt": "🇧🇷 Português",
+    "ru": "🇷🇺 Русский",
+    "tr": "🇹🇷 Türkçe",
+    "zh": "🇨🇳 中文"
   },
   "premium": {
     "showTips": "📊 View Tax Optimization Tips",
     "title": "📊 Personalized Tax Optimization Guide"
   },
   "recommendations": {
-    "title": ""
+    "title": "Try These Too"
   },
   "results": {
     "breakdown": "Deduction Breakdown",
@@ -105,43 +106,43 @@
   },
   "sections": {
     "basic": {
-      "defaultSummary": "",
-      "title": ""
-    },
-    "incomeDeduction": {
-      "defaultSummary": "",
-      "title": ""
+      "title": "Basic Info",
+      "defaultSummary": "Enter salary and dependent details"
     },
     "insurance": {
-      "defaultSummary": "",
-      "title": ""
+      "title": "Social Insurance",
+      "defaultSummary": "Auto-calculated based on salary"
+    },
+    "incomeDeduction": {
+      "title": "Income Deductions",
+      "defaultSummary": "Card spending & housing deductions"
     },
     "taxCredit": {
-      "defaultSummary": "",
-      "title": ""
+      "title": "Tax Credits",
+      "defaultSummary": "Medical, education, pension savings, etc."
     }
   },
   "summary": {
-    "expectedRefund": ""
+    "expectedRefund": "Estimated Refund"
   },
   "taxCredits": {
-    "donations": "",
-    "donationsHelper": "",
-    "education": "",
-    "educationHelper": "",
-    "insurance": "",
-    "insuranceHelper": "",
-    "irp": "",
-    "irpHelper": "",
-    "medical": "",
-    "medicalHelper": "",
-    "monthlyRent": "",
-    "monthlyRentHelper": "",
-    "pensionSaving": "",
-    "pensionSavingHelper": ""
+    "medical": "Medical Expenses (Self & Family)",
+    "medicalHelper": "15% credit on amount exceeding 3% of salary",
+    "education": "Education Expenses",
+    "educationHelper": "Unlimited self; 3M K-12 / 9M college cap",
+    "donations": "Charitable Donations",
+    "donationsHelper": "15% credit (30% over 10M KRW)",
+    "insurance": "Protection Insurance Premiums",
+    "insuranceHelper": "Up to 1M KRW/yr, 12% credit",
+    "pensionSaving": "Pension Savings",
+    "pensionSavingHelper": "Up to 6M KRW (12%–15% credit)",
+    "irp": "IRP (Retirement Pension)",
+    "irpHelper": "9M KRW combined cap with Pension Savings",
+    "monthlyRent": "Monthly Rent (Annual Total)",
+    "monthlyRentHelper": "Salary <= 70M KRW, up to 10M KRW/yr (15%–17%)"
   },
   "whatif": {
-    "title": ""
+    "title": "💡 How much more could I get back?"
   },
   "related": {
     "title": "More to Explore",
@@ -188,5 +189,8 @@
     "book2Title": "Your Money or Your Life",
     "book2Author": "Vicki Robin",
     "book2Desc": "Timeless framework for aligning your spending, take-home pay, and personal priorities."
+  },
+  "accessibility": {
+    "skipToMain": "Skip to main content"
   }
 }
