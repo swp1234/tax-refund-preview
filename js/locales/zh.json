@@ -66,7 +66,8 @@
     "won": "원",
     "auto": "자동",
     "calculate": "计算",
-    "reset": "重置"
+    "reset": "重置",
+    "enterSalary": "请输入年薪金额。"
   },
   "insurance": {
     "autoCalcNotice": "급여를 입력하면 자동 계산됩니다. 실제 납부액과 다르면 직접 수정하세요.",
@@ -118,9 +119,8 @@
     "breakdown": "扣除明细"
   },
   "premium": {
-    "title": "AI税务节省提示",
-    "watchAd": "观看广告查看提示",
-    "showTips": "절세 전략 팁 보기"
+    "title": "📊 个性化节税策略指南",
+    "showTips": "📊 查看节税优化建议"
   },
   "whatif": {
     "title": "💡 이렇게 하면 얼마나 더 받을까?"
@@ -168,5 +168,25 @@
     "a4": "输入工资后，国民养老金(4.5%)、健康保险(3.545%)、长期护理和就业保险(0.9%)自动计算。如果实际金额不同，可以手动调整。",
     "q5": "我可以分享结果吗？",
     "a5": "是的，您可以通过社交媒体分享结果或复制链接。共享结果中不包含个人数据。"
+  },
+  "share": {
+    "saveCard": "保存节税卡片",
+    "twitter": "分享到 X",
+    "copyUrl": "复制链接",
+    "copied": "链接已复制！",
+    "cardTitle": "年度退税与抵扣速查卡",
+    "cardSub": "养老抵扣 · 消费额度 · 退税规划清单",
+    "downloadStarted": "已保存 1080×1920 节税速查卡片！"
+  },
+  "curated": {
+    "badge": "精选好书",
+    "title": "财税规划与财富增长推荐书籍",
+    "subtitle": "善用税收优惠账户并将退税结余转化为长期财富的经典读物",
+    "book1Title": "财富的简单之路（The Simple Path to Wealth）",
+    "book1Author": "JL Collins",
+    "book1Desc": "清晰介绍税收优惠账户与低费率指数投资的财务自由实践指南。",
+    "book2Title": "要钱还是要生活（Your Money or Your Life）",
+    "book2Author": "Vicki Robin",
+    "book2Desc": "重新审视税后收入、时间价值与消费习惯的经典个人理财作品。"
   }
 }

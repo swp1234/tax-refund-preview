@@ -66,7 +66,8 @@
     "won": "원",
     "auto": "자동",
     "calculate": "Berechnen",
-    "reset": "Zurücksetzen"
+    "reset": "Zurücksetzen",
+    "enterSalary": "Bitte geben Sie Ihr Jahresgehalt ein."
   },
   "insurance": {
     "autoCalcNotice": "급여를 입력하면 자동 계산됩니다. 실제 납부액과 다르면 직접 수정하세요.",
@@ -118,9 +119,8 @@
     "breakdown": "Abzugsaufschlüsselung"
   },
   "premium": {
-    "title": "KI Steuerersparnis-Tipps",
-    "watchAd": "Schau eine Anzeige um Tipps zu sehen",
-    "showTips": "절세 전략 팁 보기"
+    "title": "📊 Persönlicher Steueroptimierungs-Guide",
+    "showTips": "📊 Steuertipps anzeigen"
   },
   "whatif": {
     "title": "💡 이렇게 하면 얼마나 더 받을까?"
@@ -168,5 +168,25 @@
     "a4": "Bei Eingabe Ihres Gehalts wird die Sozialversicherung automatisch berechnet.",
     "q5": "Kann ich meine Ergebnisse teilen?",
     "a5": "Ja, Sie können über soziale Medien teilen oder den Link kopieren. Keine persönlichen Daten enthalten."
+  },
+  "share": {
+    "saveCard": "Steuerkarte speichern",
+    "twitter": "Auf X teilen",
+    "copyUrl": "Link kopieren",
+    "copied": "Link kopiert!",
+    "cardTitle": "Steuererstattungs-Kurzübersicht",
+    "cardSub": "Vorsorgebeiträge · Freibeträge · Checkliste",
+    "downloadStarted": "1080×1920 Steuer-Checkliste gespeichert!"
+  },
+  "curated": {
+    "badge": "BUCHTIPP",
+    "title": "Empfohlene Bücher zu Finanzen & Vermögen",
+    "subtitle": "Ausgewählte Lektüre, um Steuervorteile gezielt für den Vermögensaufbau zu nutzen",
+    "book1Title": "The Simple Path to Wealth",
+    "book1Author": "JL Collins",
+    "book1Desc": "Praxiserprobter Leitfaden für steuereffizientes Sparen und Index-Investing.",
+    "book2Title": "Dein Geld oder dein Leben",
+    "book2Author": "Vicki Robin",
+    "book2Desc": "Der Klassiker zur Neuausrichtung von Nettoeinkommen, Konsum und Lebenszeit."
   }
 }

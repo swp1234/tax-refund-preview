@@ -4,9 +4,9 @@
     "title": "Tax Refund Preview - Calculator | DopaBrain"
   },
   "buttons": {
-    "calculate": "",
-    "close": "",
-    "reset": ""
+    "calculate": "Calculate",
+    "close": "Close",
+    "reset": "Reset"
   },
   "common": {
     "adArea": ""
@@ -45,7 +45,8 @@
     "salaryHelper": "Combined earned income and other income",
     "spouse": "",
     "won": "",
-    "yes": ""
+    "yes": "",
+    "enterSalary": "Please enter your annual salary."
   },
   "header": {
     "badge": "2026 Tax Refund",
@@ -92,9 +93,8 @@
     "zh": ""
   },
   "premium": {
-    "showTips": "",
-    "title": "AI Tax Savings Tips",
-    "watchAd": "Watch an ad to see tips"
+    "showTips": "📊 View Tax Optimization Tips",
+    "title": "📊 Personalized Tax Optimization Guide"
   },
   "recommendations": {
     "title": ""
@@ -168,5 +168,25 @@
     "a4": "When you enter your salary, national pension (4.5%), health insurance (3.545%), long-term care, and employment insurance (0.9%) are auto-calculated. You can manually adjust if actual amounts differ.",
     "q5": "Can I share my results?",
     "a5": "Yes, you can share your results via social media or copy the link. No personal data is included in shared results, so your privacy is protected."
+  },
+  "share": {
+    "saveCard": "Save Tax Card",
+    "twitter": "Share on X",
+    "copyUrl": "Copy Link",
+    "copied": "Link copied to clipboard!",
+    "cardTitle": "Year-End Tax Deduction Cheat Sheet",
+    "cardSub": "Pension Credits · Card Thresholds · Exemption Check",
+    "downloadStarted": "Saved 1080×1920 tax checklist card!"
+  },
+  "curated": {
+    "badge": "BOOK PICK",
+    "title": "Recommended Tax & Wealth Building Books",
+    "subtitle": "Curated reads on turning tax refunds and savings efficiency into long-term wealth",
+    "book1Title": "The Simple Path to Wealth",
+    "book1Author": "JL Collins",
+    "book1Desc": "A practical roadmap to financial independence using tax-advantaged accounts and index investing.",
+    "book2Title": "Your Money or Your Life",
+    "book2Author": "Vicki Robin",
+    "book2Desc": "Timeless framework for aligning your spending, take-home pay, and personal priorities."
   }
 }

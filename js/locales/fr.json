@@ -66,7 +66,8 @@
     "won": "원",
     "auto": "자동",
     "calculate": "Calculer",
-    "reset": "Réinitialiser"
+    "reset": "Réinitialiser",
+    "enterSalary": "Veuillez saisir votre salaire annuel."
   },
   "insurance": {
     "autoCalcNotice": "급여를 입력하면 자동 계산됩니다. 실제 납부액과 다르면 직접 수정하세요.",
@@ -118,9 +119,8 @@
     "breakdown": "Ventilation des Déductions"
   },
   "premium": {
-    "title": "Conseils d'Économies d'Impôts IA",
-    "watchAd": "Regarde une annonce pour voir les conseils",
-    "showTips": "절세 전략 팁 보기"
+    "title": "📊 Guide Personnalisé d’Optimisation Fiscale",
+    "showTips": "📊 Voir les Conseils Fiscaux"
   },
   "whatif": {
     "title": "💡 이렇게 하면 얼마나 더 받을까?"
@@ -168,5 +168,25 @@
     "a4": "Lorsque vous entrez votre salaire, l'assurance sociale est calculée automatiquement.",
     "q5": "Puis-je partager mes résultats ?",
     "a5": "Oui, vous pouvez partager via les réseaux sociaux ou copier le lien. Aucune donnée personnelle n'est incluse."
+  },
+  "share": {
+    "saveCard": "Enregistrer la carte",
+    "twitter": "Partager sur X",
+    "copyUrl": "Copier le lien",
+    "copied": "Lien copié !",
+    "cardTitle": "Fiche Mémo Déductions Fiscales",
+    "cardSub": "Épargne Retraite · Plafonds · Vérifications",
+    "downloadStarted": "Carte fiscale 1080×1920 enregistrée !"
+  },
+  "curated": {
+    "badge": "LIVRE",
+    "title": "Livres Recommandés Finance & Patrimoine",
+    "subtitle": "Lectures sélectionnées pour transformer vos économies d’impôt en patrimoine durable",
+    "book1Title": "The Simple Path to Wealth",
+    "book1Author": "JL Collins",
+    "book1Desc": "Méthode claire pour bâtir son patrimoine grâce aux comptes fiscalement avantageux.",
+    "book2Title": "La Bourse ou la Vie",
+    "book2Author": "Vicki Robin",
+    "book2Desc": "Ouvrage de référence pour harmoniser revenu net, dépenses et liberté."
   }
 }

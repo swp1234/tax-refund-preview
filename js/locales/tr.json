@@ -66,7 +66,8 @@
     "won": "원",
     "auto": "자동",
     "calculate": "Hesapla",
-    "reset": "Sıfırla"
+    "reset": "Sıfırla",
+    "enterSalary": "Lütfen yıllık maaşınızı girin."
   },
   "insurance": {
     "autoCalcNotice": "급여를 입력하면 자동 계산됩니다. 실제 납부액과 다르면 직접 수정하세요.",
@@ -118,9 +119,8 @@
     "breakdown": "Kesinti Detayı"
   },
   "premium": {
-    "title": "YZ Vergi Tasarrufu İpuçları",
-    "watchAd": "İpuçları görmek için reklam izle",
-    "showTips": "절세 전략 팁 보기"
+    "title": "📊 Kişiselleştirilmiş Vergi Tasarrufu Rehberi",
+    "showTips": "📊 Vergi İpuçlarını Gör"
   },
   "whatif": {
     "title": "💡 이렇게 하면 얼마나 더 받을까?"
@@ -168,5 +168,25 @@
     "a4": "Maaşınızı girdiğinizde sosyal sigorta otomatik hesaplanır.",
     "q5": "Sonuçlarımı paylaşabilir miyim?",
     "a5": "Evet, sosyal medya üzerinden paylaşabilir veya bağlantıyı kopyalayabilirsiniz."
+  },
+  "share": {
+    "saveCard": "Vergi Kartını Kaydet",
+    "twitter": "X'te Paylaş",
+    "copyUrl": "Bağlantıyı Kopyala",
+    "copied": "Bağlantı kopyalandı!",
+    "cardTitle": "Yıl Sonu Vergi İndirimi Kartı",
+    "cardSub": "Emeklilik Kredisi · Harcama Limiti · Kontrol",
+    "downloadStarted": "1080×1920 vergi kartı indirildi!"
+  },
+  "curated": {
+    "badge": "KİTAP",
+    "title": "Önerilen Finans ve Servet Yönetimi Kitapları",
+    "subtitle": "Vergi iadelerini ve birikimleri uzun vadeli servete dönüştüren seçkin eserler",
+    "book1Title": "The Simple Path to Wealth",
+    "book1Author": "JL Collins",
+    "book1Desc": "Vergi avantajlı hesaplar ve endeks yatırımı ile finansal özgürlük rehberi.",
+    "book2Title": "Your Money or Your Life",
+    "book2Author": "Vicki Robin",
+    "book2Desc": "Net gelir, harcama alışkanlıkları ve yaşam önceliklerini dengeleyen klasik."
   }
 }

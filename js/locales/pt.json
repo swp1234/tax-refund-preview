@@ -66,7 +66,8 @@
     "won": "원",
     "auto": "자동",
     "calculate": "Calcular",
-    "reset": "Redefinir"
+    "reset": "Redefinir",
+    "enterSalary": "Por favor, insira seu salário anual."
   },
   "insurance": {
     "autoCalcNotice": "급여를 입력하면 자동 계산됩니다. 실제 납부액과 다르면 직접 수정하세요.",
@@ -118,9 +119,8 @@
     "breakdown": "Detalhamento de Deduções"
   },
   "premium": {
-    "title": "Dicas de Economia de Impostos com IA",
-    "watchAd": "Assistir um anúncio para ver dicas",
-    "showTips": "절세 전략 팁 보기"
+    "title": "📊 Guia Personalizado de Economia Fiscal",
+    "showTips": "📊 Ver Dicas de Economia Fiscal"
   },
   "whatif": {
     "title": "💡 이렇게 하면 얼마나 더 받을까?"
@@ -168,5 +168,25 @@
     "a4": "Ao inserir seu salário, o seguro social é calculado automaticamente.",
     "q5": "Posso compartilhar meus resultados?",
     "a5": "Sim, você pode compartilhar pelas redes sociais ou copiar o link. Dados pessoais não são incluídos."
+  },
+  "share": {
+    "saveCard": "Salvar Cartão",
+    "twitter": "Compartilhar no X",
+    "copyUrl": "Copiar Link",
+    "copied": "Link copiado!",
+    "cardTitle": "Cartão de Deduções Fiscais",
+    "cardSub": "Previdência · Deduções · Planejamento Anual",
+    "downloadStarted": "Cartão fiscal 1080×1920 salvo!"
+  },
+  "curated": {
+    "badge": "RECOMENDADO",
+    "title": "Livros Recomendados de Finanças e Patrimônio",
+    "subtitle": "Leituras selecionadas para transformar restituições e economia tributária em riqueza",
+    "book1Title": "The Simple Path to Wealth",
+    "book1Author": "JL Collins",
+    "book1Desc": "Roteiro prático para independência financeira com eficiência tributária e índices.",
+    "book2Title": "Dinheiro ou Vida",
+    "book2Author": "Vicki Robin",
+    "book2Desc": "Método clássico para equilibrar ganhos líquidos, gastos e prioridades reais."
   }
 }

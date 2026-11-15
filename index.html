@@ -8,7 +8,7 @@
     <meta name="description" content="Estimate your year-end tax refund in just 1 minute. Auto-calculate insurance, credit card deductions, and medical/education tax credits. Try free!">
     <meta name="keywords" content="2026 연말정산, 연말정산 환급액, 연말정산 계산기, 연말정산 미리보기, 환급액 계산, 연말정산 시뮬레이션, 소득공제, 세액공제, 신용카드 공제">
     <meta name="theme-color" content="#3742fa">
-    <meta name="dateModified" content="2026-11-07">
+    <meta name="dateModified" content="2026-11-15">
     <title>Tax Refund Calculator - Free Year-End Preview | DopaBrain</title>
     <meta property="og:title" content="Tax Refund Calculator - Free Year-End Preview | DopaBrain">
     <meta property="og:description" content="Estimate your tax refund in 1 minute. Auto-calculate insurance, deductions, and tax credits. Try free!">
@@ -27,18 +27,18 @@
     <meta name="twitter:image" content="https://dopabrain.com/portal/img/og/tax-refund-preview.png">
     <meta name="twitter:site" content="@dopabrain">
     <link rel="canonical" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="en" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="es" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="id" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="de" href="https://dopabrain.com/tax-refund-preview/">
-    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/tax-refund-preview/">
+    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/tax-refund-preview/?lang=ko">
+    <link rel="alternate" hreflang="en" href="https://dopabrain.com/tax-refund-preview/?lang=en">
+    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/tax-refund-preview/?lang=zh">
+    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/tax-refund-preview/?lang=hi">
+    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/tax-refund-preview/?lang=ru">
+    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/tax-refund-preview/?lang=ja">
+    <link rel="alternate" hreflang="es" href="https://dopabrain.com/tax-refund-preview/?lang=es">
+    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/tax-refund-preview/?lang=pt">
+    <link rel="alternate" hreflang="id" href="https://dopabrain.com/tax-refund-preview/?lang=id">
+    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/tax-refund-preview/?lang=tr">
+    <link rel="alternate" hreflang="de" href="https://dopabrain.com/tax-refund-preview/?lang=de">
+    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/tax-refund-preview/?lang=fr">
     <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/tax-refund-preview/">
     <script type="application/ld+json">
 {
@@ -83,7 +83,7 @@
   },
   "featureList": "19 Input Fields, Auto Insurance Calculation, 5-Level Earned Income Deduction, Credit/Debit/Market/Transit Card Deductions, Pension/IRP Tax Credit, Rent Deduction, Tax Saving Tips, Result Sharing, Multilingual Support (12 Languages)",
   "datePublished": "2026-01-15",
-  "dateModified": "2026-11-07"
+  "dateModified": "2026-11-15"
 }
 </script>
     <!-- BreadcrumbList Schema -->
@@ -498,9 +498,9 @@
                     <!-- Summary Stats -->
                     <div class="results-stats" id="resultStats"></div>
 
-                    <button id="premiumBtn" class="btn btn-premium" data-i18n="premium.showTips">
-                        <span class="premium-icon">✨</span>
-                        절세 전략 팁 보기
+                    <button id="premiumBtn" class="btn btn-premium">
+                        <span class="premium-icon">📊</span>
+                        <span data-i18n="premium.showTips">절세 전략 팁 보기</span>
                     </button>
                 </div>
             </section>
@@ -513,7 +513,40 @@
                 </div>
             </section>
 
-            <!-- Recommendations -->
+            <!-- Share & Tax Strategy Card -->
+            <div class="tax-share-bar">
+                <button type="button" class="tax-share-btn tax-card-btn" id="saveCardBtn">📸 <span data-i18n="share.saveCard">Save Tax Card</span></button>
+                <button type="button" class="tax-share-btn" id="shareTwitterBtn">𝕏 <span data-i18n="share.twitter">Share on X</span></button>
+                <button type="button" class="tax-share-btn" id="shareUrlBtn">🔗 <span data-i18n="share.copyUrl">Copy Link</span></button>
+            </div>
+            <canvas id="shareCanvas" width="1080" height="1920" style="display:none;" aria-hidden="true"></canvas>
+
+            <!-- Curated Finance & Wealth Books -->
+            <section class="curated-resources-card" id="curated-resources-card" aria-label="Recommended Tax and Wealth Building Books">
+                <div class="curated-card-header">
+                    <span class="curated-badge" data-i18n="curated.badge">BOOK PICK</span>
+                    <h2 data-i18n="curated.title">Recommended Tax &amp; Wealth Building Books</h2>
+                    <p data-i18n="curated.subtitle">Curated reads on turning tax refunds and savings efficiency into long-term wealth</p>
+                </div>
+                <div class="curated-list">
+                    <a href="https://www.amazon.com/dp/1533667926?tag=dopabrain-20" target="_blank" rel="sponsored noopener noreferrer" class="curated-item" data-item-id="simple-path-wealth" data-resource-type="book">
+                        <span class="curated-icon" aria-hidden="true">📈</span>
+                        <div class="curated-info">
+                            <strong data-i18n="curated.book1Title">The Simple Path to Wealth</strong>
+                            <span class="curated-author" data-i18n="curated.book1Author">JL Collins</span>
+                            <span class="curated-desc" data-i18n="curated.book1Desc">A practical roadmap to financial independence using tax-advantaged accounts and index investing.</span>
+                        </div>
+                    </a>
+                    <a href="https://www.amazon.com/dp/0143115766?tag=dopabrain-20" target="_blank" rel="sponsored noopener noreferrer" class="curated-item" data-item-id="your-money-your-life" data-resource-type="book">
+                        <span class="curated-icon" aria-hidden="true">🧭</span>
+                        <div class="curated-info">
+                            <strong data-i18n="curated.book2Title">Your Money or Your Life</strong>
+                            <span class="curated-author" data-i18n="curated.book2Author">Vicki Robin</span>
+                            <span class="curated-desc" data-i18n="curated.book2Desc">Timeless framework for aligning your spending, take-home pay, and personal priorities.</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
 
     <!-- Premium Modal -->
     <div id="premiumModal" class="modal hidden">
@@ -583,7 +616,7 @@
         }
     })();
     </script>
-    <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button onclick="(async()=>{const u=location.href,t=document.title;if(typeof gtag==='function')gtag('event','share',{method:navigator.share?'native':'clipboard',app_name:'tax-refund-preview'});if(navigator.share){try{await navigator.share({title:t,url:u})}catch(e){}}else{await navigator.clipboard.writeText(u);this.textContent='✅';setTimeout(()=>this.textContent='📤',1500)}})()" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
+    <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button type="button" id="share-float-btn" aria-label="Share calculator" style="width:48px;height:48px;min-width:48px;min-height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
     <!-- About Section -->
     <section style="max-width:640px;margin:32px auto;padding:0 16px;">
       <h2 data-i18n="about.title" style="font-size:20px;margin-bottom:12px;">About Tax Refund Calculator</h2>
@@ -595,11 +628,11 @@
     <!-- FAQ Section -->
     <section style="max-width:640px;margin:24px auto;padding:0 16px;">
       <h2 data-i18n="faq.title" style="font-size:20px;margin-bottom:16px;">Frequently Asked Questions</h2>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Is this calculator accurate?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">This calculator provides estimates based on tax laws. For exact results, please use your country's official tax service.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">What deductions does it support?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">It supports 19 input fields including social insurance, credit/debit card spending, medical, education, donations, pension savings, IRP, and monthly rent.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Is my personal data safe?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">All calculations happen in your browser. No personal data is sent to any server.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">How is social insurance calculated?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">When you enter your salary, pension, health insurance, and employment insurance are auto-calculated. You can manually adjust if actual amounts differ.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Can I share my results?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, you can share via social media or copy the link. No personal data is included in shared results.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Is this calculator accurate?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">This calculator provides estimates based on tax laws. For exact results, please use your country's official tax service.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">What deductions does it support?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">It supports 19 input fields including social insurance, credit/debit card spending, medical, education, donations, pension savings, IRP, and monthly rent.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Is my personal data safe?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">All calculations happen in your browser. No personal data is sent to any server.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">How is social insurance calculated?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">When you enter your salary, pension, health insurance, and employment insurance are auto-calculated. You can manually adjust if actual amounts differ.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Can I share my results?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, you can share via social media or copy the link. No personal data is included in shared results.</p></details>
     </section>
 
     <div class="related-tests" style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
@@ -612,12 +645,5 @@
       </div>
     </div>
     <script src="/portal/js/cross-promo.js" defer></script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
-  });
-}
-</script>
 </body>
 </html>

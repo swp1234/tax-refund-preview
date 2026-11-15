@@ -66,7 +66,8 @@
     "won": "원",
     "auto": "자동",
     "calculate": "Calcular",
-    "reset": "Reiniciar"
+    "reset": "Reiniciar",
+    "enterSalary": "Por favor, ingresa tu salario anual."
   },
   "insurance": {
     "autoCalcNotice": "급여를 입력하면 자동 계산됩니다. 실제 납부액과 다르면 직접 수정하세요.",
@@ -118,9 +119,8 @@
     "breakdown": "Desglose de Deducción"
   },
   "premium": {
-    "title": "Consejos de Ahorro Fiscal de IA",
-    "watchAd": "Ver un anuncio para ver consejos",
-    "showTips": "절세 전략 팁 보기"
+    "title": "📊 Guía Personalizada de Optimización Fiscal",
+    "showTips": "📊 Ver Consejos de Ahorro Fiscal"
   },
   "whatif": {
     "title": "💡 이렇게 하면 얼마나 더 받을까?"
@@ -168,5 +168,25 @@
     "a4": "Al ingresar tu salario, el seguro social se calcula automáticamente.",
     "q5": "¿Puedo compartir mis resultados?",
     "a5": "Sí, puedes compartir por redes sociales o copiar el enlace. No se incluyen datos personales."
+  },
+  "share": {
+    "saveCard": "Guardar Tarjeta",
+    "twitter": "Compartir en X",
+    "copyUrl": "Copiar Enlace",
+    "copied": "¡Enlace copiado!",
+    "cardTitle": "Guía Rápida de Deducciones Fiscales",
+    "cardSub": "Pensiones · Deducciones · Planificación Anual",
+    "downloadStarted": "¡Tarjeta fiscal 1080×1920 guardada!"
+  },
+  "curated": {
+    "badge": "LECTURA",
+    "title": "Libros Recomendados sobre Finanzas e Impuestos",
+    "subtitle": "Lecturas clave para convertir devoluciones y ahorros en patrimonio a largo plazo",
+    "book1Title": "The Simple Path to Wealth",
+    "book1Author": "JL Collins",
+    "book1Desc": "Hoja de ruta práctica con cuentas fiscalmente eficientes e inversión indexada.",
+    "book2Title": "La bolsa o la vida",
+    "book2Author": "Vicki Robin",
+    "book2Desc": "Guía clásica para alinear tus gastos, ingresos netos y libertad financiera."
   }
 }

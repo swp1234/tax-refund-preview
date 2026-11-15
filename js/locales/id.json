@@ -66,7 +66,8 @@
     "won": "원",
     "auto": "자동",
     "calculate": "Hitung",
-    "reset": "Setel Ulang"
+    "reset": "Setel Ulang",
+    "enterSalary": "Silakan masukkan gaji tahunan Anda."
   },
   "insurance": {
     "autoCalcNotice": "급여를 입력하면 자동 계산됩니다. 실제 납부액과 다르면 직접 수정하세요.",
@@ -118,9 +119,8 @@
     "breakdown": "Rincian Potongan"
   },
   "premium": {
-    "title": "Tips Penghematan Pajak AI",
-    "watchAd": "Tonton iklan untuk melihat tips",
-    "showTips": "절세 전략 팁 보기"
+    "title": "📊 Panduan Optimasi Pajak Pribadi",
+    "showTips": "📊 Lihat Tips Hemat Pajak"
   },
   "whatif": {
     "title": "💡 이렇게 하면 얼마나 더 받을까?"
@@ -168,5 +168,25 @@
     "a4": "Saat memasukkan gaji, asuransi sosial dihitung otomatis.",
     "q5": "Bisakah saya membagikan hasil?",
     "a5": "Ya, Anda dapat berbagi melalui media sosial atau menyalin tautan. Data pribadi tidak disertakan."
+  },
+  "share": {
+    "saveCard": "Simpan Kartu Pajak",
+    "twitter": "Bagikan ke X",
+    "copyUrl": "Salin Tautan",
+    "copied": "Tautan disalin!",
+    "cardTitle": "Kartu Ringkas Potongan Pajak",
+    "cardSub": "Kredit Pensiun · Batas Kartu · Daftar Periksa",
+    "downloadStarted": "Kartu pajak 1080×1920 tersimpan!"
+  },
+  "curated": {
+    "badge": "PILIHAN",
+    "title": "Buku Rekomendasi Pajak & Keuangan",
+    "subtitle": "Bacaan pilihan untuk mengelola pengembalian pajak menjadi aset jangka panjang",
+    "book1Title": "The Simple Path to Wealth",
+    "book1Author": "JL Collins",
+    "book1Desc": "Peta jalan praktis menuju kebebasan finansial lewat akun hemat pajak.",
+    "book2Title": "Your Money or Your Life",
+    "book2Author": "Vicki Robin",
+    "book2Desc": "Kerangka klasik untuk menyelaraskan penghasilan bersih dan prioritas hidup."
   }
 }

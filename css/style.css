@@ -2484,3 +2484,178 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
 
 @media (prefers-contrast: more){button{border:2px solid #3498db;}}
 .rec-card:focus-visible,.input-group:focus-visible{outline:3px solid #3498db;outline-offset:4px;}
+
+/* Share & Tax Strategy Bar */
+.tax-share-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 640px;
+    margin: 18px auto 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.tax-share-btn {
+    flex: 1 1 100px;
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: transform 0.15s ease, border-color 0.2s ease;
+}
+
+.tax-share-btn:hover {
+    border-color: #3742fa;
+    transform: translateY(-1px);
+}
+
+.tax-card-btn {
+    background: linear-gradient(135deg, rgba(55, 66, 250, 0.3), rgba(0, 184, 148, 0.22));
+    border-color: rgba(55, 66, 250, 0.55);
+}
+
+/* Curated Tax & Wealth Books */
+.curated-resources-card {
+    max-width: 640px;
+    margin: 22px auto 0;
+    padding: 18px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.curated-card-header {
+    margin-bottom: 12px;
+}
+
+.curated-badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(55, 66, 250, 0.2);
+    color: #8b95ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+}
+
+.curated-card-header h2 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.curated-card-header p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.curated-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.curated-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: #fff;
+    transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.curated-item:hover {
+    border-color: #3742fa;
+    transform: translateY(-1px);
+}
+
+.curated-icon {
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.curated-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    text-align: left;
+}
+
+.curated-info strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.curated-author {
+    font-size: 12px;
+    font-weight: 600;
+    color: #00b894;
+}
+
+.curated-desc {
+    font-size: 12px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.tax-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(55, 66, 250, 0.5);
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    z-index: 2000;
+    max-width: calc(100vw - 32px);
+    text-align: center;
+}
+
+[data-theme="light"] .tax-share-btn,
+[data-theme="light"] .curated-item {
+    background: rgba(55, 66, 250, 0.06);
+    border-color: rgba(55, 66, 250, 0.2);
+    color: #1e293b;
+}
+
+[data-theme="light"] .curated-card-header h2,
+[data-theme="light"] .curated-info strong {
+    color: #1e293b;
+}
+
+[data-theme="light"] .curated-card-header p,
+[data-theme="light"] .curated-desc {
+    color: #475569;
+}

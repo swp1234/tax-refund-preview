@@ -12,9 +12,11 @@ class I18n {
             const urlLang = params.get('lang');
             if (urlLang && this.supportedLanguages.includes(urlLang)) return urlLang;
         } catch (e) {}
-        const savedLang = localStorage.getItem('app_language');
-        if (savedLang && this.supportedLanguages.includes(savedLang)) return savedLang;
-        const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
+        try {
+            const savedLang = localStorage.getItem('app_language');
+            if (savedLang && this.supportedLanguages.includes(savedLang)) return savedLang;
+        } catch (e) {}
+        const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
         if (this.supportedLanguages.includes(browserLang)) return browserLang;
         return 'en';
     }
@@ -35,17 +37,17 @@ class I18n {
         const keys = key.split('.');
         let value = this.translations[this.currentLang];
         for (const k of keys) {
-            if (value && value[k]) value = value[k];
+            if (value && value[k] !== undefined) value = value[k];
             else return key;
         }
-        return value;
+        return value || key;
     }
 
     async setLanguage(lang) {
         if (!this.supportedLanguages.includes(lang)) return false;
         if (!this.translations[lang]) await this.loadTranslations(lang);
         this.currentLang = lang;
-        localStorage.setItem('app_language', lang);
+        try { localStorage.setItem('app_language', lang); } catch (e) {}
         document.documentElement.lang = lang;
         this.updateUI();
         return true;
@@ -53,14 +55,24 @@ class I18n {
 
     updateUI() {
         document.querySelectorAll('[data-i18n]').forEach(el => {
-            el.textContent = this.t(el.getAttribute('data-i18n'));
+            const key = el.getAttribute('data-i18n');
+            const val = this.t(key);
+            if (val && val !== key && typeof val === 'string' && val.trim() !== '') {
+                el.textContent = val;
+            }
         });
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-            el.placeholder = this.t(el.getAttribute('data-i18n-placeholder'));
+            const key = el.getAttribute('data-i18n-placeholder');
+            const val = this.t(key);
+            if (val && val !== key && typeof val === 'string' && val.trim() !== '') {
+                el.placeholder = val;
+            }
         });
-        document.title = this.t('app.title');
+        const title = this.t('app.title');
+        if (title && title !== 'app.title' && title.trim() !== '') document.title = title;
         const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.content = this.t('app.description');
+        const desc = this.t('app.description');
+        if (meta && desc && desc !== 'app.description' && desc.trim() !== '') meta.content = desc;
     }
 
     getCurrentLanguage() {
@@ -87,3 +99,4 @@ class I18n {
 }
 
 const i18n = new I18n();
+window.i18n = i18n;

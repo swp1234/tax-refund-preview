@@ -54,6 +54,7 @@ function setupLanguageSelector() {
                 langOptions.forEach(o => o.classList.remove('active'));
                 opt.classList.add('active');
                 langMenu.classList.add('hidden');
+                initRelatedFunnels();
             }
         });
     });
@@ -387,7 +388,7 @@ function handleCalculate() {
 
     // Validate salary
     if (data.salary === 0) {
-        alert('급여액을 입력하세요.');
+        showTaxToast(window.i18n?.t('form.enterSalary') || 'Please enter your annual salary.');
         elements.salary.focus();
         return;
     }
@@ -433,6 +434,11 @@ function handleCalculate() {
 
     // What-If 시나리오
     displayWhatIf(result, data, taxableSalary);
+
+    // Clean calculation telemetry (no raw income/refund values)
+    const localTaxAmt = Math.round((result.finalTax || 0) * 0.1);
+    const refundFlag = (result.refund - localTaxAmt) >= 0 ? 'refund' : 'due';
+    recordTaxTelemetry(refundFlag);
 
     // Scroll to results
     elements.resultsSection.scrollIntoView({ behavior: 'smooth' });
@@ -731,8 +737,8 @@ function handlePremiumClick() {
 }
 
 function showTips() {
-    elements.premiumAd.classList.add('hidden');
-    elements.tipsContent.classList.remove('hidden');
+    if (elements.premiumAd) elements.premiumAd.classList.add('hidden');
+    if (elements.tipsContent) elements.tipsContent.classList.remove('hidden');
 
     const data = getFormData();
     const taxableSalary = Math.max(0, data.salary - data.nonTaxable);
@@ -847,10 +853,175 @@ function loadFormData() {
 // ===== SERVICE WORKER REGISTRATION =====
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js').catch(err => {
-            console.log('Service Worker registration failed:', err);
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+    }
+}
+
+function showTaxToast(message) {
+    document.querySelectorAll('.tax-toast').forEach(el => el.remove());
+    const toast = document.createElement('div');
+    toast.className = 'tax-toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2200);
+}
+
+let __taxTrackedStart = false;
+let __taxLastCompleteAt = 0;
+
+function trackTaxEvent(name, params) {
+    if (typeof gtag === 'function') {
+        gtag('event', name, params || {});
+    }
+}
+
+function recordTaxTelemetry(resultType) {
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    if (!__taxTrackedStart) {
+        __taxTrackedStart = true;
+        trackTaxEvent('test_start', {
+            app_name: 'tax-refund-preview',
+            mode: 'year_end_tax',
+            lang
         });
     }
+    const now = Date.now();
+    if (now - __taxLastCompleteAt > 800) {
+        __taxLastCompleteAt = now;
+        trackTaxEvent('test_complete', {
+            app_name: 'tax-refund-preview',
+            result_type: resultType || 'refund',
+            lang
+        });
+    }
+}
+
+function buildTaxShareUrl() {
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    url.searchParams.set('utm_source', 'share');
+    return url.toString();
+}
+
+async function copyTaxShareUrl(allowNative = false) {
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    const shareUrl = buildTaxShareUrl();
+    if (allowNative && navigator.share) {
+        try {
+            await navigator.share({ title: document.title, url: shareUrl });
+            trackTaxEvent('share', { method: 'native', app_name: 'tax-refund-preview', lang });
+            return;
+        } catch (e) {
+            if (e && e.name === 'AbortError') return;
+        }
+    }
+    try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(shareUrl);
+        }
+    } catch (e) {}
+    showTaxToast(window.i18n?.t('share.copied') || 'Link copied to clipboard!');
+    trackTaxEvent('share', { method: 'clipboard', app_name: 'tax-refund-preview', lang });
+}
+
+function shareTaxTwitter() {
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    const shareUrl = buildTaxShareUrl();
+    const title = window.i18n?.t('header.mainTitle') || 'Tax Refund Calculator';
+    window.open(
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(shareUrl)}`,
+        '_blank',
+        'noopener,noreferrer'
+    );
+    trackTaxEvent('share', { method: 'twitter', app_name: 'tax-refund-preview', lang });
+}
+
+function generateTaxCard() {
+    const canvas = document.getElementById('shareCanvas');
+    if (!canvas || !canvas.getContext) return;
+    const ctx = canvas.getContext('2d');
+    const W = 1080;
+    const H = 1920;
+    canvas.width = W;
+    canvas.height = H;
+
+    const grad = ctx.createLinearGradient(0, 0, W, H);
+    grad.addColorStop(0, '#0f172a');
+    grad.addColorStop(0.5, '#191d4a');
+    grad.addColorStop(1, '#0c1a2a');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.fillStyle = 'rgba(55, 66, 250, 0.18)';
+    ctx.beginPath();
+    ctx.arc(540, 420, 380, 0, Math.PI * 2);
+    ctx.fill();
+
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    const title = window.i18n?.t('share.cardTitle') || 'Year-End Tax Deduction Cheat Sheet';
+    const sub = window.i18n?.t('share.cardSub') || 'Pension Credits · Card Thresholds · Exemption Check';
+
+    ctx.fillStyle = '#00b894';
+    ctx.font = 'bold 34px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('DOPABRAIN TAX OPTIMIZER', W / 2, 160);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 58px sans-serif';
+    ctx.fillText(title.slice(0, 34), W / 2, 260);
+
+    ctx.fillStyle = '#cbd5e1';
+    ctx.font = '32px sans-serif';
+    ctx.fillText(sub.slice(0, 50), W / 2, 325);
+
+    const rows = [
+        ['1. Card Spending Threshold', 'Deductions start above 25% of gross annual salary'],
+        ['2. Debit / Cash vs Credit', 'Debit/Cash 30% & Market/Transit 40% vs Credit 15%'],
+        ['3. Pension + IRP Credits', 'Combined limit up to 9M KRW (13.2% - 16.5% tax credit)'],
+        ['4. Monthly Rent Credit', 'Up to 15% - 17% credit for eligible non-homeowners'],
+        ['5. Privacy First', 'All calculations run locally — zero data uploaded']
+    ];
+
+    let y = 450;
+    rows.forEach(([label, desc]) => {
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+        ctx.beginPath();
+        ctx.roundRect(80, y, W - 160, 200, 26);
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(0, 184, 148, 0.35)';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.textAlign = 'left';
+        ctx.fillStyle = '#00b894';
+        ctx.font = 'bold 32px sans-serif';
+        ctx.fillText(label, 120, y + 72);
+
+        ctx.fillStyle = '#f8fafc';
+        ctx.font = '28px sans-serif';
+        ctx.fillText(desc, 120, y + 136);
+        y += 235;
+    });
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#8b95ff';
+    ctx.font = 'bold 34px sans-serif';
+    ctx.fillText(`dopabrain.com/tax-refund-preview/?lang=${lang}`, W / 2, 1780);
+
+    try {
+        const link = document.createElement('a');
+        link.download = `dopabrain-tax-checklist-${lang}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    } catch (e) {}
+
+    showTaxToast(window.i18n?.t('share.downloadStarted') || 'Saved 1080×1920 tax checklist card!');
+    trackTaxEvent('save_image', {
+        app_name: 'tax-refund-preview',
+        result_type: 'checklist',
+        lang
+    });
 }
 
 // ===== INITIALIZE APP =====
@@ -870,15 +1041,32 @@ function initApp() {
     setupToggleButtons();
     setupCounters();
     setupModalCloseOnOverlay();
+    initRelatedFunnels();
 
     // Setup event listeners
-    elements.calculateBtn.addEventListener('click', handleCalculate);
-    elements.resetBtn.addEventListener('click', handleReset);
-    elements.helpBtn.addEventListener('click', handleHelpClick);
-    elements.premiumBtn.addEventListener('click', handlePremiumClick);
-    elements.closeModal.addEventListener('click', closePremiumModal);
-    elements.closeTipsBtn.addEventListener('click', closePremiumModal);
-    elements.closeHelpModal.addEventListener('click', closeHelpModal);
+    elements.calculateBtn?.addEventListener('click', handleCalculate);
+    elements.resetBtn?.addEventListener('click', handleReset);
+    elements.helpBtn?.addEventListener('click', handleHelpClick);
+    elements.premiumBtn?.addEventListener('click', handlePremiumClick);
+    elements.closeModal?.addEventListener('click', closePremiumModal);
+    elements.closeTipsBtn?.addEventListener('click', closePremiumModal);
+    elements.closeHelpModal?.addEventListener('click', closeHelpModal);
+
+    document.getElementById('saveCardBtn')?.addEventListener('click', generateTaxCard);
+    document.getElementById('shareTwitterBtn')?.addEventListener('click', shareTaxTwitter);
+    document.getElementById('shareUrlBtn')?.addEventListener('click', () => copyTaxShareUrl(false));
+    document.getElementById('share-float-btn')?.addEventListener('click', () => copyTaxShareUrl(true));
+
+    document.querySelectorAll('#curated-resources-card a.curated-item').forEach(link => {
+        link.addEventListener('click', () => {
+            trackTaxEvent('curated_resource_click', {
+                app_name: 'tax-refund-preview',
+                resource_type: link.dataset.resourceType || 'book',
+                item_id: link.dataset.itemId || '',
+                lang: window.i18n?.getCurrentLanguage() || 'en'
+            });
+        });
+    });
 
     // Register service worker
     registerServiceWorker();
@@ -901,8 +1089,8 @@ if (document.readyState === 'loading') {
 
 // Funnel bridge & language preservation
 function initRelatedFunnels() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || (window.i18n ? window.i18n.getCurrentLanguage() : 'ko') || 'ko';
+    const getLang = () => (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'en';
+    const lang = getLang();
     const base = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : 'https://dopabrain.com';
     document.querySelectorAll('.related-grid a').forEach(link => {
         const baseHref = link.getAttribute('data-base-href') || link.getAttribute('href');
@@ -921,7 +1109,7 @@ function initRelatedFunnels() {
                         cta_surface: 'tax_refund_preview_related',
                         destination: link.getAttribute('href'),
                         source: 'tax_refund_preview',
-                        lang: lang
+                        lang: getLang()
                     });
                 }
             });
