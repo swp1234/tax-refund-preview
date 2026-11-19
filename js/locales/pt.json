@@ -192,5 +192,11 @@
   },
   "accessibility": {
     "skipToMain": "Ir para o conteúdo principal"
+  },
+  "nextStep": {
+    "label": "Próximo passo recomendado",
+    "title": "Arquétipo do Eu Futuro",
+    "desc": "Transforme suas prioridades de hoje em um mapa para 10 anos em 8 perguntas.",
+    "cta": "Explorar Eu Futuro →"
   }
 }

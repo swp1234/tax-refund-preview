@@ -192,5 +192,11 @@
   },
   "accessibility": {
     "skipToMain": "Aller au contenu principal"
+  },
+  "nextStep": {
+    "label": "Prochaine étape recommandée",
+    "title": "Archétype du Moi Futur (10 ans)",
+    "desc": "Reliez vos priorités du jour à votre trajectoire sur 10 ans en 8 questions.",
+    "cta": "Explorer mon Moi Futur →"
   }
 }

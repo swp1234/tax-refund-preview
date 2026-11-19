@@ -192,5 +192,11 @@
   },
   "accessibility": {
     "skipToMain": "Skip to main content"
+  },
+  "nextStep": {
+    "label": "Recommended Next Step",
+    "title": "10-Year Future Self Archetype",
+    "desc": "Turn today’s priorities into a clear 10-year roadmap of energy and direction in 8 questions.",
+    "cta": "Explore Future Self →"
   }
 }

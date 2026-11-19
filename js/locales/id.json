@@ -192,5 +192,11 @@
   },
   "accessibility": {
     "skipToMain": "Lewati ke konten utama"
+  },
+  "nextStep": {
+    "label": "Langkah Berikutnya",
+    "title": "Arketipe Diri Masa Depan",
+    "desc": "Ubah prioritas hari ini menjadi peta arah 10 tahun dalam 8 pertanyaan.",
+    "cta": "Jelajahi Diri Masa Depan →"
   }
 }
